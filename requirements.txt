@@ -1,0 +1,24 @@
+# File delle dipendenze per il progetto
+
+# Per l'ETL e la manipolazione dei dati
+pandas==2.2.3
+numpy==2.2.4
+
+# Per la connessione e l'interazione con il database PostgreSQL
+SQLAlchemy==2.0.38
+
+# Per il machine learning e la regressione
+scikit-learn==1.6.1
+
+# Per il modello Prophet (previsioni serie temporali)
+prophet==1.1.6
+
+# Per la gestione delle variabili d'ambiente
+python-dotenv==1.0.1
+
+# Per la visualizzazione dei dati
+matplotlib==3.10.0
+
+
+
+
