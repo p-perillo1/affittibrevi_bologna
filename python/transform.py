@@ -73,7 +73,7 @@ df_filtered = df_tourism_cleaned[
 X = df_filtered[['anno', 'mese_num']]
 y = df_filtered['numero']
 
-# Crea un modello di regressione polinomiale di grado 7
+# Crea un modello di regressione polinomiale di grado 3
 model = make_pipeline(PolynomialFeatures(degree=3), LinearRegression())
 model.fit(X, y)
 
