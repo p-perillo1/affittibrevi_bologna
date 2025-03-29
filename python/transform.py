@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from extract import df_tourism, df_listings, df_reviews
-from sklearn.linear_model import LinearRegression
+
 
 # 1. EDA - Esplorazione dati
 for name, df in [("Tourism", df_tourism), ("Listings", df_listings), ("Reviews", df_reviews)]:
@@ -47,16 +47,14 @@ plot_avg_price(df_listings_cleaned)
 plot_reviews_per_year(df_reviews_cleaned)
 plot_tourists_per_year(df_tourism_cleaned)
 
-from sklearn.preprocessing import PolynomialFeatures
-import numpy as np
-from sklearn.metrics import r2_score
+
 
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.linear_model import LinearRegression
 from sklearn.pipeline import make_pipeline
 from sklearn.metrics import r2_score
 import numpy as np
-import matplotlib.pyplot as plt
+
 
 # Converti il mese in numerico
 df_tourism_cleaned['mese_num'] = df_tourism_cleaned['mese'].map({
