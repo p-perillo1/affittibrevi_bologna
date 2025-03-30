@@ -23,18 +23,8 @@ df = pd.read_sql_table("prezzo_turisti_mensili", con=engine)
 # Visualizza le prime righe per capire come sono strutturati i dati
 print(df.head())
 
-# Mappa i nomi dei mesi in numeri
-month_map = {
-    "January": 1, "February": 2, "March": 3, "April": 4,
-    "May": 5, "June": 6, "July": 7, "August": 8,
-    "September": 9, "October": 10, "November": 11, "December": 12
-}
-
-# Aggiungi una colonna 'mese_num' che converte il mese da stringa a numero
-df['mese_num'] = df['mese'].map(month_map)
-
 # Caricare il DataFrame (assumiamo che sia già disponibile come df)
-df_filtered = df[(df['mese'].isin(['November', 'December'])) & (df['anno'] < 2024)]
+df_filtered = df[(df['mese'].isin([11, 12])) & (df['anno'] < 2024)]
 
 # Variabili indipendenti (X) e dipendenti (y)
 X = df_filtered[['anno', 'turisti_mensili']]
@@ -78,7 +68,7 @@ query = text("""
 params = {
     'prezzo_mensile': previsione_dicembre_2024,
     'anno': 2024,
-    'mese': 'December'
+    'mese': 12
 }
 
 # Esegui la query con gestione degli errori
@@ -87,5 +77,8 @@ params = {
 with engine.begin() as connection:  # Usa engine.begin() per gestire automaticamente la transazione
     connection.execute(query, params)
     print("Dati aggiornati con successo per Dicembre 2024")
+
+
+
 
 
