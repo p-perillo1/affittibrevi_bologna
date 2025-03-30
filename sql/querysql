@@ -2,36 +2,26 @@ CREATE TABLE prezzo_turisti_mensili AS
 WITH num_reviews AS (
     SELECT 
         listing_id, 
-        EXTRACT(YEAR FROM date) AS anno,   -- Estrai l'anno dalla data
-        EXTRACT(MONTH FROM date) AS mese,  -- Estrai il mese dalla data
+        EXTRACT(YEAR FROM TO_DATE(date, 'YYYY-MM-DD')) AS anno,  -- Converte la stringa 'date' in formato DATE se necessario
+        EXTRACT(MONTH FROM TO_DATE(date, 'YYYY-MM-DD')) AS mese,  -- Converte la stringa 'date' in formato DATE se necessario
         COUNT(listing_id) AS num_reviews_in_month
     FROM reviews
     GROUP BY listing_id, anno, mese
 )
 SELECT 
     nr.anno, 
-    TO_CHAR(TO_DATE(nr.mese::TEXT, 'MM'), 'FMMonth') AS mese,  -- Visualizza il nome del mese in formato "Month"
+    nr.mese,  -- Visualizza il nome del mese in formato numerico
     SUM(l.price * l.minimum_nights * nr.num_reviews_in_month) AS prezzo_mensile,  -- Moltiplica il prezzo per il minimo di notti e il numero di recensioni
     t.numero AS turisti_mensili
 FROM listings l
 JOIN num_reviews nr ON l.id = nr.listing_id  -- Associare listings con il numero di recensioni
-JOIN tourism t ON nr.anno = t.anno AND nr.mese = 
-    CASE 
-        WHEN t.mese = 'Gennaio' THEN 1
-        WHEN t.mese = 'Febbraio' THEN 2
-        WHEN t.mese = 'Marzo' THEN 3
-        WHEN t.mese = 'Aprile' THEN 4
-        WHEN t.mese = 'Maggio' THEN 5
-        WHEN t.mese = 'Giugno' THEN 6
-        WHEN t.mese = 'Luglio' THEN 7
-        WHEN t.mese = 'Agosto' THEN 8
-        WHEN t.mese = 'Settembre' THEN 9
-        WHEN t.mese = 'Ottobre' THEN 10
-        WHEN t.mese = 'Novembre' THEN 11
-        WHEN t.mese = 'Dicembre' THEN 12
-    END  -- Mappa il nome del mese in un numero
+JOIN tourism t ON nr.anno = t.anno AND nr.mese = t.mese_num  -- Join diretto senza CASE WHEN
 GROUP BY nr.anno, nr.mese, t.numero
 ORDER BY nr.anno, nr.mese;
+
+
+
+
 
 
 
