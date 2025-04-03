@@ -9,19 +9,22 @@ Il progetto include la creazione di una dashboard interattiva in Power BI che vi
 
 Insight:
 La dashboard mostra l'andamento annuale e mensile dei prezzi degli affitti brevi a Bologna e il numero di turisti. Gli insight ottenuti dalle analisi mostrano una crescita continua dei prezzi in coincidenza con l'aumento dei turisti.
-
 È stato osservato un picco nei prezzi degli affitti brevi durante i mesi di maggio, luglio e ottobre.
-
 I quartieri centrali tendono ad avere prezzi medi più alti, mentre i quartieri periferici offrono tariffe più basse, ma con una crescita più rapida nei prezzi.
 
 Funzionalità della Dashboard in Power BI
 La dashboard fornisce le seguenti visualizzazioni:
    
   • Prezzi per anno: Analisi dei prezzi totali degli affitti brevi per ogni anno. 
-  • Turisti per anno: Numero totale di turisti che hanno visitato Bologna ogni anno.
+ 
+ • Turisti per anno: Numero totale di turisti che hanno visitato Bologna ogni anno.
+
   • Prezzi e turisti per anno: Relazione tra i prezzi degli affitti brevi e il numero di turisti per anno.
+
   • Prezzi mese per mese per anno: Andamento dei prezzi mese per mese per ogni anno.
-  • Prezzi medi per quartiere: Visualizzazione dei prezzi medi degli affitti brevi nei diversi quartieri di Bologna.
+ 
+ • Prezzi medi per quartiere: Visualizzazione dei prezzi medi degli affitti brevi nei diversi quartieri di Bologna.
+
  • Variazione percentuale dei prezzi rispetto all'anno precedente: Analisi della variazione percentuale dei prezzi rispetto all'anno precedente.
 
 ![Screenshot 2025-04-04 004852](https://github.com/user-attachments/assets/9d3e478b-55d3-4c17-a4e2-3fb322ab68da)
