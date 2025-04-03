@@ -12,11 +12,11 @@ La dashboard mostra l'andamento annuale e mensile dei prezzi degli affitti brevi
 È stato osservato un picco nei prezzi degli affitti brevi durante i mesi di maggio, luglio e ottobre.
 I quartieri centrali tendono ad avere prezzi medi più alti, mentre i quartieri periferici offrono tariffe più basse, ma con una crescita più rapida nei prezzi.
 
-Funzionalità della Dashboard in Power BI
+
+     Funzionalità della Dashboard in Power BI
 
 La dashboard fornisce le seguenti visualizzazioni:
-   
-  • Prezzi per anno: Analisi dei prezzi totali degli affitti brevi per ogni anno. 
+ • Prezzi per anno: Analisi dei prezzi totali degli affitti brevi per ogni anno. 
  
  • Turisti per anno: Numero totale di turisti che hanno visitato Bologna ogni anno.
 
