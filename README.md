@@ -15,10 +15,9 @@ La dashboard mostra l'andamento annuale e mensile dei prezzi degli affitti brevi
 I quartieri centrali tendono ad avere prezzi medi più alti, mentre i quartieri periferici offrono tariffe più basse, ma con una crescita più rapida nei prezzi.
 
 Funzionalità della Dashboard in Power BI
-
 La dashboard fornisce le seguenti visualizzazioni:
-    • Prezzi per anno: Analisi dei prezzi totali degli affitti brevi per ogni anno.
-    • Turisti per anno: Numero totale di turisti che hanno visitato Bologna ogni anno.
+• Prezzi per anno: Analisi dei prezzi totali degli affitti brevi per ogni anno.
+• Turisti per anno: Numero totale di turisti che hanno visitato Bologna ogni anno.
     • Prezzi e turisti per anno: Relazione tra i prezzi degli affitti brevi e il numero di turisti per anno.
     • Prezzi mese per mese per anno: Andamento dei prezzi mese per mese per ogni anno.
     • Prezzi medi per quartiere: Visualizzazione dei prezzi medi degli affitti brevi nei diversi quartieri di Bologna.
