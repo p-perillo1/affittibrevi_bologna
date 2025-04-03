@@ -53,25 +53,18 @@ In questa fase sono stati sviluppati i seguenti passaggi chiave:
     • ETL (Extract, Transform, Load):
 
         ◦ Extract: I dati sono stati estratti dai file CSV (Airbnb e turisti) e caricati in un ambiente di sviluppo.
-
         ◦ Transform: I dati sono stati puliti e trasformati rimuovendo i duplicati e le colonne interamente vuote. In particolare, sono stati eseguiti calcoli per stimare i prezzi di dicembre 2024 tramite regressione polinomiale utilizzando i dati di novembre 2024 per testare il modello.
-
         ◦ Load: I dati trasformati sono stati caricati in un database PostgreSQL utilizzando Supabase.
-
         ◦ SQL: Creazione di due tabelle aggregate in SQL per visualizzare il numero dei turisti e il totale dei prezzi per anno e mese.
 
     • Calcolo dei Prezzi Annuali e Mensili: Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di recensioni e il numero minimo di notti per ciascun alloggio, sono stati calcolati i prezzi annuali e mensili con le seguenti formule:
-
     • Prezzo annuale: Moltiplicando il prezzo per notte di ciascun alloggio per il numero di recensioni e il numero minimo di notti.
-
     • Prezzo mensile: Calcolato come il prezzo annuale diviso per 12.
 
 Questi calcoli sono stati effettuati direttamente nel database PostgreSQL utilizzando query SQL per aggregare i dati per anno e mese. Le tabelle risultanti sono state poi utilizzate per l'analisi successiva. È importante notare che, trattandosi di stime, questi prezzi rappresentano una proiezione basata sui dati disponibili e non devono essere considerati come valori assoluti, ma come un'indicazione dei trend del mercato.
           
     • Regressione polinomiale: Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati sui prezzi di dicembre 2024. È stata quindi implementata una regressione polinomiale per stimare i prezzi di dicembre 2024 e aggiornato il database con i nuovi dati.
-
     • Regressione Lineare: È stata implementata una regressione lineare per prevedere il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello.
-
     • Testing con Prophet: È stato anche testato un modello con Prophet per la previsione dei prezzi, come ulteriore metodo di verifica.
 
 4. Esecuzione (Execute)
