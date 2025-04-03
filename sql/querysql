@@ -2,8 +2,8 @@ CREATE TABLE prezzo_turisti_mensili AS
 WITH num_reviews AS (
     SELECT 
         listing_id, 
-        EXTRACT(YEAR FROM TO_DATE(date, 'YYYY-MM-DD')) AS anno,  -- Converte la stringa 'date' in formato DATE se necessario
-        EXTRACT(MONTH FROM TO_DATE(date, 'YYYY-MM-DD')) AS mese,  -- Converte la stringa 'date' in formato DATE se necessario
+        EXTRACT(YEAR FROM date) AS anno,  -- Converte la stringa 'date' in formato DATE se necessario
+        EXTRACT(MONTH FROM date) AS mese,  -- Converte la stringa 'date' in formato DATE se necessario
         COUNT(listing_id) AS num_reviews_in_month
     FROM reviews
     GROUP BY listing_id, anno, mese
@@ -23,11 +23,6 @@ ORDER BY nr.anno, nr.mese;
 
 
 
-
-
-
-
-
 CREATE TABLE prezzo_turisti_annuali AS
 SELECT 
     anno, 
@@ -36,3 +31,18 @@ SELECT
 FROM prezzo_turisti_mensili    
 GROUP BY anno
 ORDER BY anno;
+
+
+
+
+
+
+SELECT 
+    EXTRACT(YEAR FROM "date") AS anno,
+    EXTRACT(MONTH FROM "date") AS mese,
+    COUNT(*) AS numero_recensioni,
+    MAX("date") AS ultima_recensione
+FROM reviews  
+WHERE EXTRACT(YEAR FROM "date") = 2024  -- Filtro per l'anno 2024
+GROUP BY anno, mese
+ORDER BY anno, mese;
