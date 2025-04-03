@@ -1,10 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from extract import df_tourism, df_listings, df_reviews
-from sklearn.linear_model import LinearRegression
-from sklearn.preprocessing import PolynomialFeatures
-from sklearn.pipeline import make_pipeline
-import numpy as np
+from regressione_turisti_dicembre import apply_regression  # Importiamo la funzione dal file separato
 
 # Dizionario per gestire i DataFrame
 dfs = {
@@ -23,7 +20,14 @@ explore_data(dfs)
 
 # 2. Pulizia dati
 def clean_data(df):
-    return df.rename(columns=str.lower).drop_duplicates().dropna(how="all", axis=1)
+    df.columns = df.columns.str.strip()  # Rimuovi spazi bianchi dalle intestazioni
+    df = df.rename(columns=str.lower)  # Converti le intestazioni in minuscolo
+    df = df.drop_duplicates()  # Applica drop_duplicates
+    df = df.dropna(how="all", axis=1)  # Applica dropna
+    if 'date' in df.columns:
+        df['date'] = pd.to_datetime(df['date'], errors='coerce')  # Converti la colonna date in datetime
+    return df
+
 
 # Pulisce i DataFrame nel dizionario
 dfs = {name: clean_data(df) for name, df in dfs.items()}
@@ -54,44 +58,11 @@ for name, df in dfs.items():
     elif name == "Tourism":
         plot_tourists_per_year(df)
 
-# 4. Regressione Polinomiale 
-def apply_regression(df):
-    if all(col in df.columns for col in ["anno", "mese", "numero"]):
-        df['mese_num'] = df['mese'].map({
-            'Gennaio': 1, 'Febbraio': 2, 'Marzo': 3, 'Aprile': 4, 'Maggio': 5, 'Giugno': 6,
-            'Luglio': 7, 'Agosto': 8, 'Settembre': 9, 'Ottobre': 10, 'Novembre': 11, 'Dicembre': 12
-        })
-
-        df_filtered = df[df['anno'] >= 2023]
-        X, y = df_filtered[['anno', 'mese_num']], df_filtered['numero']
-
-        model = make_pipeline(PolynomialFeatures(degree=2), LinearRegression())
-        model.fit(X, y)
-
-        r2 = model.score(X, y)
-        print(f"R^2 (accuratezza del modello): {r2:.4f}")
-
-        X_pred = pd.DataFrame([[2024, 12]], columns=['anno', 'mese_num'])
-        y_pred = model.predict(X_pred)
-        print(f"Numero stimato di turisti per dicembre 2024: {y_pred[0]:.2f}")
-
-        # Aggiunta della previsione al dataset
-        df = pd.concat([df, pd.DataFrame([{
-            'anno': 2024, 'mese': 'Dicembre', 'mese_num': 12, 'numero': int(y_pred[0])
-        }])])
-
-        df = df.sort_values(by=['anno', 'mese_num'], ascending=[True, False])
-        print(df.tail(12))
-
-        plot_tourists_per_year(df, "Previsione Totale Turisti per Anno")
-        
-    return df  # Restituisce il DataFrame aggiornato
-
-# Applica la regressione e aggiorna il dataframe
-
+# 4. Applicazione della regressione polinomiale
 dfs["Tourism"] = apply_regression(dfs["Tourism"])
 
 # Esporta i DataFrame trasformati
 df_tourism_cleaned = dfs["Tourism"]
 df_listings_cleaned = dfs["Listings"]
 df_reviews_cleaned = dfs["Reviews"]
+
