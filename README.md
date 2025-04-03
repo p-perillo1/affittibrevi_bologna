@@ -51,9 +51,13 @@ In questa fase sono stati analizzati i dati per identificare eventuali problemat
 In questa fase sono stati sviluppati i seguenti passaggi chiave:
 
     • ETL (Extract, Transform, Load):
+
         ◦ Extract: I dati sono stati estratti dai file CSV (Airbnb e turisti) e caricati in un ambiente di sviluppo.
+
         ◦ Transform: I dati sono stati puliti e trasformati rimuovendo i duplicati e le colonne interamente vuote. In particolare, sono stati eseguiti calcoli per stimare i prezzi di dicembre 2024 tramite regressione polinomiale utilizzando i dati di novembre 2024 per testare il modello.
+
         ◦ Load: I dati trasformati sono stati caricati in un database PostgreSQL utilizzando Supabase.
+
         ◦ SQL: Creazione di due tabelle aggregate in SQL per visualizzare il numero dei turisti e il totale dei prezzi per anno e mese.
 
     • Calcolo dei Prezzi Annuali e Mensili: Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di recensioni e il numero minimo di notti per ciascun alloggio, sono stati calcolati i prezzi annuali e mensili con le seguenti formule:
