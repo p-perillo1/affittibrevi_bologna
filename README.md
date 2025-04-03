@@ -13,6 +13,7 @@ La dashboard mostra l'andamento annuale e mensile dei prezzi degli affitti brevi
 I quartieri centrali tendono ad avere prezzi medi più alti, mentre i quartieri periferici offrono tariffe più basse, ma con una crescita più rapida nei prezzi.
 
 Funzionalità della Dashboard in Power BI
+
 La dashboard fornisce le seguenti visualizzazioni:
    
   • Prezzi per anno: Analisi dei prezzi totali degli affitti brevi per ogni anno. 
