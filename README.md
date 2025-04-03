@@ -52,13 +52,13 @@ In questa fase sono stati sviluppati i seguenti passaggi chiave:
 
     • ETL (Extract, Transform, Load):
 
-        Extract: I dati sono stati estratti dai file CSV (Airbnb e turisti) e caricati in un ambiente di sviluppo.
+       Extract: I dati sono stati estratti dai file CSV (Airbnb e turisti) e caricati in un ambiente di sviluppo.
 
-        Transform: I dati sono stati puliti e trasformati rimuovendo i duplicati e le colonne interamente vuote. In particolare, sono stati eseguiti calcoli per stimare i prezzi di dicembre 2024 tramite regressione polinomiale utilizzando i dati di novembre 2024 per testare il modello.
+       Transform: I dati sono stati puliti e trasformati rimuovendo i duplicati e le colonne interamente vuote. In particolare, sono stati eseguiti calcoli per stimare i prezzi di dicembre 2024 tramite regressione polinomiale utilizzando i dati di novembre 2024 per testare il modello.
 
-        Load: I dati trasformati sono stati caricati in un database PostgreSQL utilizzando Supabase.
+       Load: I dati trasformati sono stati caricati in un database PostgreSQL utilizzando Supabase.
 
-        SQL: Creazione di due tabelle aggregate in SQL per visualizzare il numero dei turisti e il totale dei prezzi per anno e mese.
+       SQL: Creazione di due tabelle aggregate in SQL per visualizzare il numero dei turisti e il totale dei prezzi per anno e mese.
 
     • Calcolo dei Prezzi Annuali e Mensili: Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di recensioni e il numero minimo di notti per ciascun alloggio, sono stati calcolati i prezzi annuali e mensili con le seguenti formule:
     • Prezzo annuale: Moltiplicando il prezzo per notte di ciascun alloggio per il numero di recensioni e il numero minimo di notti.
@@ -78,12 +78,12 @@ Una volta completata la fase di costruzione, sono stati eseguiti i seguenti pass
 
 Tecnologie Utilizzate
 
-    • Python: Per la pulizia, trasformazione e analisi dei dati.
-    • Pandas: Per la gestione dei dati.
-    • scikit-learn: Per l'implementazione delle regressioni.
-    • Prophet: Per la previsione dei prezzi.
-    • SQL: Per creare e gestire il database PostgreSQL.
-    • Power BI: Per la visualizzazione dei dati e la creazione della dashboard interattiva.
+   • Python: Per la pulizia, trasformazione e analisi dei dati.
+   • Pandas: Per la gestione dei dati.
+   • scikit-learn: Per l'implementazione delle regressioni.
+   • Prophet: Per la previsione dei prezzi.
+   • SQL: Per creare e gestire il database PostgreSQL.
+   • Power BI: Per la visualizzazione dei dati e la creazione della dashboard interattiva.
 
 Conclusioni
 Il progetto fornisce un'analisi dettagliata degli affitti brevi a Bologna, con una particolare attenzione all'andamento dei prezzi e al numero di turisti. La dashboard interattiva in Power BI consente di esplorare le tendenze nel tempo e la relazione tra i due fattori. Le regressioni hanno permesso di stimare il totale dei prezzi e il numero dei turisti per il mese di dicembre 2024 e di fare previsioni per il 2025. È importante notare che le stime sui turisti e sui prezzi di dicembre 2024, così come le previsioni per il 2025, sono indicative e basate sui dati storici disponibili, con l'obiettivo di esplorare le possibili tendenze. Questo progetto è stato realizzato a scopo didattico e di analisi.
