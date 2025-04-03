@@ -16,6 +16,7 @@ I quartieri centrali tendono ad avere prezzi medi più alti, mentre i quartieri 
  Funzionalità della Dashboard in Power BI
 
 La dashboard fornisce le seguenti visualizzazioni:
+
  • Prezzi per anno: Analisi dei prezzi totali degli affitti brevi per ogni anno. 
  
  • Turisti per anno: Numero totale di turisti che hanno visitato Bologna ogni anno.
