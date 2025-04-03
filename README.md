@@ -67,7 +67,9 @@ In questa fase sono stati sviluppati i seguenti passaggi chiave:
 Questi calcoli sono stati effettuati direttamente nel database PostgreSQL utilizzando query SQL per aggregare i dati per anno e mese. Le tabelle risultanti sono state poi utilizzate per l'analisi successiva. È importante notare che, trattandosi di stime, questi prezzi rappresentano una proiezione basata sui dati disponibili e non devono essere considerati come valori assoluti, ma come un'indicazione dei trend del mercato.
           
     • Regressione polinomiale: Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati sui prezzi di dicembre 2024. È stata quindi implementata una regressione polinomiale per stimare i prezzi di dicembre 2024 e aggiornato il database con i nuovi dati.
+
     • Regressione Lineare: È stata implementata una regressione lineare per prevedere il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello.
+
     • Testing con Prophet: È stato anche testato un modello con Prophet per la previsione dei prezzi, come ulteriore metodo di verifica.
 
 4. Esecuzione (Execute)
@@ -79,10 +81,14 @@ Una volta completata la fase di costruzione, sono stati eseguiti i seguenti pass
 Tecnologie Utilizzate
 
   • Python: Per la pulizia, trasformazione e analisi dei dati.
+
   • Pandas: Per la gestione dei dati.
   • scikit-learn: Per l'implementazione delle regressioni.
+
   • Prophet: Per la previsione dei prezzi.
+
   • SQL: Per creare e gestire il database PostgreSQL.
+
   • Power BI: Per la visualizzazione dei dati e la creazione della dashboard interattiva.
 
 Conclusioni
