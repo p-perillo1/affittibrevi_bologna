@@ -75,8 +75,8 @@ Questi calcoli sono stati effettuati direttamente nel database PostgreSQL utiliz
 4. Esecuzione (Execute)
 Una volta completata la fase di costruzione, sono stati eseguiti i seguenti passaggi:
 
-    • Caricamento dei dati in Power BI: I dati finali sono stati importati da PostgreSQL in Power BI.
-    • Creazione della dashboard in Power BI: È stata creata una dashboard interattiva che visualizza i prezzi, i turisti e le loro relazioni nel tempo.
+   • Caricamento dei dati in Power BI: I dati finali sono stati importati da PostgreSQL in Power BI.
+   • Creazione della dashboard in Power BI: È stata creata una dashboard interattiva che visualizza i prezzi, i turisti e le loro relazioni nel tempo.
 
 Tecnologie Utilizzate
 
