@@ -49,8 +49,7 @@ Visualizzazione durante l' analasi esplorativa
 
 ![Screenshot 2025-04-04 105906](https://github.com/user-attachments/assets/a2c4bc59-be6e-4c83-82a9-142c8a3067c3)
 
-il valore di dicembre 2024 non è presente 
-
+Il valore di dicembre 2024 non è presente 
 ![Screenshot 2025-04-04 082721](https://github.com/user-attachments/assets/6e9129ba-c41d-49a6-9d57-e511ac85b496)
 
 
@@ -79,7 +78,7 @@ Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di
 - **Prezzo annuale**: Moltiplicando il prezzo per notte di ciascun alloggio per il numero di recensioni e il numero minimo di notti.
 - **Prezzo mensile**: Calcolato come il prezzo annuale diviso per 12.
 
-Questi calcoli sono stati effettuati direttamente nel database PostgreSQL utilizzando query SQL per aggregare i dati per anno e mese. Le tabelle risultanti sono state poi utilizzate per l'analisi successiva. È importante notare che, trattandosi di stime, questi prezzi rappresentano una proiezione basata sui dati disponibili e non devono essere considerati come valori assoluti, ma come un'indicazione dei trend del mercato.
+Questi calcoli sono stati effettuati direttamente nel database PostgreSQL utilizzando query SQL per aggregare i dati per anno e mese. Le tabelle risultanti sono state poi utilizzate per l'analisi successiva. **È importante notare che, trattandosi di stime, questi prezzi rappresentano una proiezione basata sui dati disponibili e non devono essere considerati come valori assoluti, ma come un'indicazione dei trend del mercato.**
 
 -**Tabella prezzi e turisti mensili**
 
