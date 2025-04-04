@@ -30,13 +30,21 @@ In questa fase sono stati estratti e analizzati i dati per identificare eventual
 
 Gli screenshot seguenti mostrano i risultati dell'analisi descrittiva (describe() e info()) sui dati, e le visualizzazioni che hanno evidenziato la mancanza dei dati di dicembre 2024:
 
+
+Analisi descrittiva sul dataframe reviews:
+
 ![Screenshot 2025-04-04 075414](https://github.com/user-attachments/assets/6f2d6761-3573-4410-9138-7352cf0b82a4)
 
+
 Visualizzazione durante l' analasi esplorativa:
+
 ![Screenshot 2025-04-04 105906](https://github.com/user-attachments/assets/a2c4bc59-be6e-4c83-82a9-142c8a3067c3)
 
+
 Sono stati stampati i dati dei turisti per il 2024:
+
 ![Screenshot 2025-04-04 084412](https://github.com/user-attachments/assets/6aae3089-3842-4496-b58d-a9a6fdc4a498)
+
 
 Il valore di dicembre 2024 non è presente:
 
