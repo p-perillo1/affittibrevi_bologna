@@ -63,6 +63,7 @@ Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di
 Questi calcoli sono stati effettuati direttamente nel database PostgreSQL utilizzando query SQL per aggregare i dati per anno e mese. Le tabelle risultanti sono state poi utilizzate per l'analisi successiva. È importante notare che, trattandosi di stime, questi prezzi rappresentano una proiezione basata sui dati disponibili e non devono essere considerati come valori assoluti, ma come un'indicazione dei trend del mercato.
 
 -**Tabella prezzi e turisti mensili**
+
 ![Screenshot 2025-04-03 233043](https://github.com/user-attachments/assets/caa5e7a3-c8cf-4575-90ef-89741d0cd554)
 
 ```SQL
@@ -87,6 +88,7 @@ Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati s
 ![Screenshot 2025-04-04 090126](https://github.com/user-attachments/assets/a2a86caa-96d5-460d-981a-1eeb64379f30)
 
 -**Tabella prezzi e turisti annuali**
+
 ```
 CREATE TABLE prezzo_turisti_annuali AS
 SELECT 
