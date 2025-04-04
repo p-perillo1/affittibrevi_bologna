@@ -108,7 +108,7 @@ Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati s
 
 -**Tabella prezzi e turisti annuali**
 
-```
+```SQL
 CREATE TABLE prezzo_turisti_annuali AS
 SELECT 
     anno, 
