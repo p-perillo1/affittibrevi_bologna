@@ -37,7 +37,7 @@ In questa fase sono stati sviluppati i seguenti passaggi chiave:
 
 - **Extract**: I dati sono stati estratti dai file CSV (Airbnb e turisti) e caricati in un ambiente di sviluppo.
 
-![Screenshot 2025-04-04 095229](https://github.com/user-attachments/assets/03cf261b-cd74-450c-81ad-abeff9b9d13a)
+![Screenshot 2025-04-04 095229](https://github.com/user-attachments/assets/390ef775-f726-4494-9379-e5223a105d4a)
 
 - **Transform**: I dati sono stati puliti e trasformati rimuovendo i duplicati, le colonne interamente vuote, rinominando in minuscolo e rimuovendo evenutali spazi bianchi da tutte le intestazioni delle colonne.
 I dati transfromati sono stati visualizzati per una prima analisi che ha evidenziato la mancanza dei dati dei turisti di dicembre 2024. Successivamente sono stati eseguiti calcoli per stimare i turisti di dicembre 2024 tramite regressione polinomiale utilizzando i dati di novembre 2024 per testare il modello.
@@ -81,6 +81,8 @@ ORDER BY anno, mese;
 Dal risultato della query si nota che i dati di dicembre 2024 sono aggiornati al 19-12-2024.
 ![Screenshot 2025-04-03 232641](https://github.com/user-attachments/assets/a67542f4-0e60-4b7b-b0b3-4664f1e586f8)
 
+
+
 #### Regressione Lineare
 È stata implementata una regressione polinomiale per calcolare il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello. Il database è stato aggiornato con i nuovi dati.
 
@@ -89,7 +91,7 @@ Dal risultato della query si nota che i dati di dicembre 2024 sono aggiornati al
 ![Screenshot 2025-04-04 090126](https://github.com/user-attachments/assets/a2a86caa-96d5-460d-981a-1eeb64379f30)
 
 #### Testing con Prophet
-È stato anche testato un modello con Prophet per la previsione dei prezzi, come ulteriore metodo di verifica.
+È stato anche testato un modello con Prophet per la previsione dei prezzi del 2025, come ulteriore metodo di verifica.
 
 ![Screenshot 2025-04-04 090308](https://github.com/user-attachments/assets/85400afd-3171-4cf4-8def-d133781cc913)
 
