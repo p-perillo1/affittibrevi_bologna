@@ -27,9 +27,19 @@ Durante la fase di pianificazione, sono stati definiti gli obiettivi principali 
 ### Analisi (Analyze)
 In questa fase sono stati analizzati i dati per identificare eventuali problematiche nei dataset:
 - Durante l'analisi esplorativa dei dati (EDA), è stato notato che i dati sui turisti erano già aggregati mensilmente, ma il dataset non includeva i dati di dicembre 2024. Questo ha portato alla necessità di implementare una regressione polinomiale per stimare i turisti mancanti di dicembre 2024.
+
 Lo screenshot seguente mostra i risultati dell'analisi descrittiva (describe() e info()) sui dati, che hanno evidenziato la mancanza dei dati di dicembre 2024:
 
 ![Screenshot 2025-04-04 075414](https://github.com/user-attachments/assets/6f2d6761-3573-4410-9138-7352cf0b82a4)
+
+Visualizzazione durante l' analasi esplorativa:
+![Screenshot 2025-04-04 105906](https://github.com/user-attachments/assets/a2c4bc59-be6e-4c83-82a9-142c8a3067c3)
+
+
+Il valore di dicembre 2024 non è presente:
+
+![Screenshot 2025-04-04 082721](https://github.com/user-attachments/assets/6e9129ba-c41d-49a6-9d57-e511ac85b496)
+
 
 ### Costruzione (Construct)
 In questa fase sono stati sviluppati i seguenti passaggi chiave:
@@ -45,14 +55,6 @@ I dati transfromati sono stati visualizzati per una prima analisi che ha evidenz
 
 ![Screenshot 2025-04-04 075414](https://github.com/user-attachments/assets/0230209c-e22d-4cb5-b513-ba7f048d3a0c)
 
-
-Visualizzazione durante l' analasi esplorativa:
-![Screenshot 2025-04-04 105906](https://github.com/user-attachments/assets/a2c4bc59-be6e-4c83-82a9-142c8a3067c3)
-
-
-Il valore di dicembre 2024 non è presente:
-
-![Screenshot 2025-04-04 082721](https://github.com/user-attachments/assets/6e9129ba-c41d-49a6-9d57-e511ac85b496)
 
 
 Regressioni:
