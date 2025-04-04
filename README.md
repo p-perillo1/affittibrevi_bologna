@@ -3,7 +3,7 @@
 Questo progetto si propone di analizzare il mercato degli affitti brevi a Bologna, utilizzando i dataset forniti da Airbnb e dal Comune di Bologna. L'obiettivo principale è analizzare l'andamento dei prezzi e del numero di turisti nel corso degli anni.  
 Sono stati utilizzati dati storici sui prezzi degli affitti brevi e sul numero di turisti per identificare le tendenze, le fluttuazioni e le eventuali correlazioni. Inoltre, sono state sviluppate tecniche di regressione per stimare i prezzi futuri, in particolare per il 2025, usando i dati del 2024 per testare i modelli. Il progetto include la creazione di una dashboard interattiva in Power BI che visualizza l'andamento dei prezzi e dei turisti nel tempo.
 
-![Screenshot 2025-04-04 103903](https://github.com/user-attachments/assets/2edf0b18-5ef6-41e2-8284-80649f2b3e42)
+![Screenshot 2025-04-04 104440](https://github.com/user-attachments/assets/96398de9-13a7-47da-8549-bd2e4b5b5d86)
 
 ## Funzionalità della Dashboard in Power BI
 
@@ -118,7 +118,7 @@ Una volta completata la fase di costruzione, sono stati eseguiti i seguenti pass
 - **Caricamento dei dati in Power BI**: I dati finali sono stati importati da PostgreSQL in Power BI.
 - **Creazione della dashboard in Power BI**: È stata creata una dashboard interattiva che visualizza i prezzi, i turisti e le loro relazioni nel tempo.
 
-![Screenshot 2025-04-04 103903](https://github.com/user-attachments/assets/a0428bcd-70b5-4614-8534-91180869b25c)
+![Screenshot 2025-04-04 104440](https://github.com/user-attachments/assets/c49988f4-3616-4dbd-ab64-40e49c77653e)
 ![Screenshot 2025-04-04 103955](https://github.com/user-attachments/assets/983cd9c0-dd23-48df-94b8-0d1340b7a3bd)
 ![Screenshot 2025-04-04 104019](https://github.com/user-attachments/assets/263ee53f-13ca-4764-87d4-13caf0cd9cc6)
 
