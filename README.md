@@ -25,16 +25,18 @@ Il flusso di lavoro del progetto segue il framework PACE (Plan, Analyze, Constru
 Durante la fase di pianificazione, sono stati definiti gli obiettivi principali del progetto: visualizzare l'andamento dei prezzi e dei turisti nel tempo e prevedere i prezzi del 2025. È stato stabilito l'ambito del progetto, inclusa la scelta dei dataset.
 
 ### Analisi (Analyze)
-In questa fase sono stati analizzati i dati per identificare eventuali problematiche nei dataset:
+In questa fase sono stati estratti e analizzati i dati per identificare eventuali problematiche nei dataset:
 - Durante l'analisi esplorativa dei dati (EDA), è stato notato che i dati sui turisti erano già aggregati mensilmente, ma il dataset non includeva i dati di dicembre 2024. Questo ha portato alla necessità di implementare una regressione polinomiale per stimare i turisti mancanti di dicembre 2024.
 
-Lo screenshot seguente mostra i risultati dell'analisi descrittiva (describe() e info()) sui dati, che hanno evidenziato la mancanza dei dati di dicembre 2024:
+Gli screenshot seguenti mostrano i risultati dell'analisi descrittiva (describe() e info()) sui dati, e le visualizzazioni che hanno evidenziato la mancanza dei dati di dicembre 2024:
 
 ![Screenshot 2025-04-04 075414](https://github.com/user-attachments/assets/6f2d6761-3573-4410-9138-7352cf0b82a4)
 
 Visualizzazione durante l' analasi esplorativa:
 ![Screenshot 2025-04-04 105906](https://github.com/user-attachments/assets/a2c4bc59-be6e-4c83-82a9-142c8a3067c3)
 
+Sono stati stampati i dati dei turisti per il 2024:
+![Screenshot 2025-04-04 084412](https://github.com/user-attachments/assets/6aae3089-3842-4496-b58d-a9a6fdc4a498)
 
 Il valore di dicembre 2024 non è presente:
 
