@@ -32,7 +32,7 @@ GROUP BY anno
 ORDER BY anno;
 
 
--- Query per il conteggio del numero di recensioni e la data dell' ultima recensione disponibile per dicembre 2024
+-- Query per il conteggio del numero di recensioni e la data dell' ultima recensione disponibile per l'anno 2024
 SELECT 
     EXTRACT(YEAR FROM "date") AS anno,
     EXTRACT(MONTH FROM "date") AS mese,
