@@ -36,11 +36,11 @@ In questa fase sono stati sviluppati i seguenti passaggi chiave:
 #### ETL (Extract, Transform, Load)
 
 - **Extract**: I dati sono stati estratti dai file CSV (Airbnb e turisti) e caricati in un ambiente di sviluppo.
+
+![Screenshot 2025-04-04 095229](https://github.com/user-attachments/assets/191fdb00-e9cb-44fd-8f6b-40062c595ce7)
+
 - **Transform**: I dati sono stati puliti e trasformati rimuovendo i duplicati, le colonne interamente vuote, rinominando in minuscolo e rimuovendo evenutali spazi bianchi da tutte le intestazioni delle colonne.
 I dati transfromati sono stati visualizzati per una prima analisi che ha evidenziato la mancanza dei dati dei turisti di dicembre 2024. Successivamente sono stati eseguiti calcoli per stimare i turisti di dicembre 2024 tramite regressione polinomiale utilizzando i dati di novembre 2024 per testare il modello.
-- **Load**: I dati trasformati sono stati caricati in un database PostgreSQL utilizzando Supabase.
-  
-![Screenshot 2025-04-04 080149](https://github.com/user-attachments/assets/1a46ccf2-a815-4485-8cf8-b2997f6b432e)
 
 ![Screenshot 2025-04-04 080149](https://github.com/user-attachments/assets/ef7eecc1-d49f-4706-b4fa-273fef6a839c)
 
@@ -49,8 +49,10 @@ I dati transfromati sono stati visualizzati per una prima analisi che ha evidenz
 ![Screenshot 2025-04-04 084230](https://github.com/user-attachments/assets/c034e4bd-e59d-4a0a-ae04-f21a5e95cda4)
 ![Screenshot 2025-04-04 084412](https://github.com/user-attachments/assets/6aa24562-2747-465e-b61d-e7e081057692)
 
-![Screenshot 2025-04-04 084849](https://github.com/user-attachments/assets/a42d5a08-5b5e-489a-926d-8e7ce207423a)
+- **Load**: I dati trasformati sono stati caricati in un database PostgreSQL utilizzando Supabase.
 
+![Screenshot 2025-04-04 084849](https://github.com/user-attachments/assets/a42d5a08-5b5e-489a-926d-8e7ce207423a)
+  
 - **SQL**: Creazione di due tabelle aggregate in SQL per visualizzare il numero dei turisti e il totale dei prezzi per anno e mese.
 
 #### Calcolo dei Prezzi Annuali e Mensili
