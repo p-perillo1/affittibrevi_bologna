@@ -30,26 +30,21 @@ In questa fase sono stati estratti e analizzati i dati per identificare eventual
 
 Gli screenshot seguenti mostrano i risultati dell'analisi descrittiva (describe() e info()) sui dati, e le visualizzazioni che hanno evidenziato la mancanza dei dati di dicembre 2024:
 
-
 Analisi descrittiva sul dataframe reviews:
 
 ![Screenshot 2025-04-04 075414](https://github.com/user-attachments/assets/6f2d6761-3573-4410-9138-7352cf0b82a4)
-
 
 Visualizzazione durante l' analasi esplorativa:
 
 ![Screenshot 2025-04-04 105906](https://github.com/user-attachments/assets/a2c4bc59-be6e-4c83-82a9-142c8a3067c3)
 
-
 Sono stati stampati i dati dei turisti per il 2024:
 
 ![Screenshot 2025-04-04 163343](https://github.com/user-attachments/assets/c454ef0e-4084-4a20-a801-6525e33fe22c)
 
-
 Il valore di dicembre 2024 non è presente:
 
 ![Screenshot 2025-04-04 082721](https://github.com/user-attachments/assets/6e9129ba-c41d-49a6-9d57-e511ac85b496)
-
 
 ### Costruzione (Construct)
 In questa fase sono stati sviluppati i seguenti passaggi chiave:
@@ -60,26 +55,18 @@ In questa fase sono stati sviluppati i seguenti passaggi chiave:
 
 ![Screenshot 2025-04-04 095229](https://github.com/user-attachments/assets/390ef775-f726-4494-9379-e5223a105d4a)
 
-
 - **Transform**: I dati sono stati puliti e trasformati rimuovendo i duplicati, eliminando le colonne interamente vuote, rinominando tutte le intestazioni in minuscolo e rimuovendo eventuali spazi bianchi. Durante l'analisi preliminare dei dati trasformati, è stata riscontrata l'assenza dei dati relativi ai turisti di dicembre 2024. Per colmare questa mancanza, nella fase di trasformazione è stata implementata una regressione polinomiale per stimare i valori mancanti. Il modello è stato prima testato utilizzando i dati di novembre 2024 per verificarne l'accuratezza prima di applicarlo alla previsione di dicembre 2024.
-
 
 Regressioni:
 
 ![Screenshot 2025-04-04 105631](https://github.com/user-attachments/assets/867bce7e-a939-4280-94af-6f4b659adcb4)
 ![Screenshot 2025-04-04 105648](https://github.com/user-attachments/assets/3aa3f8e3-1200-434b-a078-c3d5c087c0ae)
 
-<br>
-
 ![Screenshot 2025-04-04 084230](https://github.com/user-attachments/assets/c034e4bd-e59d-4a0a-ae04-f21a5e95cda4)
 ![Screenshot 2025-04-04 084412](https://github.com/user-attachments/assets/6aa24562-2747-465e-b61d-e7e081057692)
 
-
-
-
 Visualizzazione dopo l' aggiunta del valore stimato:
 ![Screenshot 2025-04-04 110000](https://github.com/user-attachments/assets/ab4ebdfd-8113-4489-bb01-c63e0f70aedd)
-
 
 - **Load**: I dati trasformati sono stati caricati in un database PostgreSQL utilizzando Supabase.
 
@@ -177,12 +164,10 @@ La dashboard mostra l'andamento annuale e mensile dei prezzi degli affitti brevi
 ## Conclusioni
 Il progetto fornisce un'analisi degli affitti brevi a Bologna, con una particolare attenzione all'andamento dei prezzi e al numero di turisti. La dashboard interattiva in Power BI consente di esplorare le tendenze nel tempo e la relazione tra i due fattori. Le regressioni hanno permesso di stimare il totale dei prezzi e il numero dei turisti per il mese di dicembre 2024 e di fare previsioni per il 2025. **È importante notare che le stime sui turisti e sui prezzi di dicembre 2024, così come le previsioni per il 2025, sono indicative e basate sui dati storici disponibili, con l'obiettivo di esplorare le possibili tendenze. Questo progetto è stato realizzato a scopo didattico e di analisi.**
 
-
 ## Link dataset
 [Dataset Airbnb](https://inumeridibolognametropolitana.it/dati-statistici/turisti-nel-comune-e-nella-citta-metropolitana-di-bologna-serie-storica): Contiene dati sugli affitti brevi nella città di Bologna, estratti dalla piattaforma Inside Airbnb. Include informazioni su prezzi, disponibilità e recensioni.
 
 [Dataset Turisti](https://insideairbnb.com/get-the-data/):  Fornisce dati storici sul numero di turisti a Bologna e nell’area metropolitana.
-
 
 ## Struttura del progetto
 
