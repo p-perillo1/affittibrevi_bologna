@@ -65,7 +65,7 @@ Visualizzazione dopo l' aggiunta del valore stimato:
 - **Load**: I dati trasformati sono stati caricati in un database PostgreSQL utilizzando Supabase.  
 ![Screenshot 2025-04-04 084849](https://github.com/user-attachments/assets/a42d5a08-5b5e-489a-926d-8e7ce207423a)
   
-- **SQL**: Creazione di due tabelle aggregate in SQL per visualizzare il numero dei turisti e il totale dei prezzi per anno e mese.    
+- **SQL**: Creazione di due tabelle aggregate in SQL per visualizzare il numero dei turisti e il totale dei prezzi per anno e mese.      
 #### Calcolo dei Prezzi Annuali e Mensili in SQL
 Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di recensioni e il numero minimo di notti per ciascun alloggio, sono stati calcolati i prezzi annuali e mensili con le seguenti formule:
 
