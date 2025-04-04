@@ -73,6 +73,7 @@ Visualizzazione dopo l' aggiunta del valore stimato:
 ![Screenshot 2025-04-04 084849](https://github.com/user-attachments/assets/a42d5a08-5b5e-489a-926d-8e7ce207423a)
   
 - **SQL**: Creazione di due tabelle aggregate in SQL per visualizzare il numero dei turisti e il totale dei prezzi per anno e mese.
+
 #### Calcolo dei Prezzi Annuali e Mensili in SQL
 Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di recensioni e il numero minimo di notti per ciascun alloggio, sono stati calcolati i prezzi annuali e mensili con le seguenti formule:
 
@@ -97,7 +98,7 @@ WHERE EXTRACT(YEAR FROM "date") = 2024  -- Filtro per l'anno 2024
 GROUP BY anno, mese
 ORDER BY anno, mese;
 ```
-Dal risultato della query si nota che i dati di dicembre 2024 sono aggiornati al 19-12-2024.
+Dal risultato della query si nota che i dati di dicembre 2024 sono aggiornati al 19-12-2024:
 ![Screenshot 2025-04-03 232641](https://github.com/user-attachments/assets/aba029c1-7aa2-48e0-a71c-52d1e9263caa)
 
 #### Regressione polinomiale
