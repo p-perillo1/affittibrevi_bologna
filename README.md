@@ -163,5 +163,6 @@ La dashboard mostra l'andamento annuale e mensile dei prezzi degli affitti brevi
 ## Conclusioni
 Il progetto fornisce un'analisi degli affitti brevi a Bologna, con una particolare attenzione all'andamento dei prezzi e al numero di turisti. La dashboard interattiva in Power BI consente di esplorare le tendenze nel tempo e la relazione tra i due fattori. Le regressioni hanno permesso di stimare il totale dei prezzi e il numero dei turisti per il mese di dicembre 2024 e di fare previsioni per il 2025. **È importante notare che le stime sui turisti e sui prezzi di dicembre 2024, così come le previsioni per il 2025, sono indicative e basate sui dati storici disponibili, con l'obiettivo di esplorare le possibili tendenze. Questo progetto è stato realizzato a scopo didattico e di analisi.**
 
-[Dataset Airbnb](https://inumeridibolognametropolitana.it/dati-statistici/turisti-nel-comune-e-nella-citta-metropolitana-di-bologna-serie-storica)
-[Dataset Turisti](https://insideairbnb.com/get-the-data/)
+[Dataset Airbnb](https://inumeridibolognametropolitana.it/dati-statistici/turisti-nel-comune-e-nella-citta-metropolitana-di-bologna-serie-storica): Contiene dati sugli affitti brevi nella città di Bologna, estratti dalla piattaforma Inside Airbnb. Include informazioni su prezzi, disponibilità e recensioni.
+
+[Dataset Turisti](https://insideairbnb.com/get-the-data/):  Fornisce dati storici sul numero di turisti a Bologna e nell’area metropolitana,
