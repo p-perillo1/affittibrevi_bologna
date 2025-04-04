@@ -69,7 +69,7 @@ def apply_regression(df_tourism):
             print(f"Numero reale di turisti per dicembre 2024: {valore_reale[0]}")
         print(f"Numero stimato di turisti per dicembre 2024: {y_pred:.2f}")
 
-        # Aggiungiamo la previsione alla tabella
+        # Aggiungiunta della previsione alla tabella
         df_tourism = pd.concat([df_tourism, pd.DataFrame([{
             'anno': 2024, 'mese': 'Dicembre', 'mese_num': 12, 'numero': int(y_pred)
         }])])
