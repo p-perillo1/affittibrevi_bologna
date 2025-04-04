@@ -47,7 +47,8 @@ In questa fase sono stati sviluppati i seguenti passaggi chiave:
 
 #### ETL (Extract, Transform, Load)
 
-- **Extract**: I dati sono stati estratti dai file CSV (Airbnb e turisti) e caricati in un ambiente di sviluppo.  
+- **Extract**: I dati sono stati estratti dai file CSV (Airbnb e turisti) e caricati in un ambiente di sviluppo.
+
 ![Screenshot 2025-04-04 095229](https://github.com/user-attachments/assets/390ef775-f726-4494-9379-e5223a105d4a)
 
 - **Transform**: I dati sono stati puliti e trasformati rimuovendo i duplicati, eliminando le colonne interamente vuote, rinominando tutte le intestazioni in minuscolo e rimuovendo eventuali spazi bianchi. Durante l'analisi preliminare dei dati trasformati, è stata riscontrata l'assenza dei dati relativi ai turisti di dicembre 2024. Per colmare questa mancanza, nella fase di trasformazione è stata implementata una regressione polinomiale per stimare i valori mancanti. Il modello è stato prima testato utilizzando i dati di novembre 2024 per verificarne l'accuratezza prima di applicarlo alla previsione di dicembre 2024.
@@ -62,7 +63,8 @@ In questa fase sono stati sviluppati i seguenti passaggi chiave:
 Visualizzazione dopo l' aggiunta del valore stimato:  
 ![Screenshot 2025-04-04 110000](https://github.com/user-attachments/assets/ab4ebdfd-8113-4489-bb01-c63e0f70aedd)
 
-- **Load**: I dati trasformati sono stati caricati in un database PostgreSQL utilizzando Supabase.  
+- **Load**: I dati trasformati sono stati caricati in un database PostgreSQL utilizzando Supabase.
+
 ![Screenshot 2025-04-04 084849](https://github.com/user-attachments/assets/a42d5a08-5b5e-489a-926d-8e7ce207423a)
   
 - **SQL**: Creazione di due tabelle aggregate in SQL per visualizzare il numero dei turisti e il totale dei prezzi per anno e mese.      
@@ -93,7 +95,8 @@ Dal risultato della query si nota che i dati di dicembre 2024 sono aggiornati al
 ![Screenshot 2025-04-03 232641](https://github.com/user-attachments/assets/aba029c1-7aa2-48e0-a71c-52d1e9263caa)
 
 #### Regressione polinomiale
-Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati sui prezzi di dicembre 2024. È stata quindi implementata una regressione polinomiale per stimare i prezzi di dicembre 2024 e aggiornato il database con i nuovi dati.  
+Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati sui prezzi di dicembre 2024. È stata quindi implementata una regressione polinomiale per stimare i prezzi di dicembre 2024 e aggiornato il database con i nuovi dati.
+
 ![Screenshot 2025-04-04 090013](https://github.com/user-attachments/assets/4a510452-0837-4edf-88ba-31e8783cf5ed)
 
 ![Screenshot 2025-04-04 090126](https://github.com/user-attachments/assets/a2a86caa-96d5-460d-981a-1eeb64379f30)
