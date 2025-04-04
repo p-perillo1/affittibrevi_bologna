@@ -59,10 +59,10 @@ In questa fase sono stati sviluppati i seguenti passaggi chiave:
 
 Regressioni:
 
-![Screenshot 2025-04-04 105631](https://github.com/user-attachments/assets/867bce7e-a939-4280-94af-6f4b659adcb4)
+![Screenshot 2025-04-04 105631](https://github.com/user-attachments/assets/867bce7e-a939-4280-94af-6f4b659adcb4)  
 ![Screenshot 2025-04-04 105648](https://github.com/user-attachments/assets/3aa3f8e3-1200-434b-a078-c3d5c087c0ae)
 
-![Screenshot 2025-04-04 084230](https://github.com/user-attachments/assets/c034e4bd-e59d-4a0a-ae04-f21a5e95cda4)
+![Screenshot 2025-04-04 084230](https://github.com/user-attachments/assets/c034e4bd-e59d-4a0a-ae04-f21a5e95cda4)  
 ![Screenshot 2025-04-04 084412](https://github.com/user-attachments/assets/6aa24562-2747-465e-b61d-e7e081057692)
 
 Visualizzazione dopo l' aggiunta del valore stimato:
@@ -163,7 +163,8 @@ La dashboard mostra l'andamento annuale e mensile dei prezzi degli affitti brevi
 - **ODBC**: Per la connessione tra PostgreSQL e Power BI.
 
 ## Conclusioni
-Il progetto fornisce un'analisi degli affitti brevi a Bologna, con una particolare attenzione all'andamento dei prezzi e al numero di turisti. La dashboard interattiva in Power BI consente di esplorare le tendenze nel tempo e la relazione tra i due fattori. Le regressioni hanno permesso di stimare il totale dei prezzi e il numero dei turisti per il mese di dicembre 2024 e di fare previsioni per il 2025. **È importante notare che le stime sui turisti e sui prezzi di dicembre 2024, così come le previsioni per il 2025, sono indicative e basate sui dati storici disponibili, con l'obiettivo di esplorare le possibili tendenze. Questo progetto è stato realizzato a scopo didattico e di analisi.**
+Il progetto fornisce un'analisi degli affitti brevi a Bologna, con una particolare attenzione all'andamento dei prezzi e al numero di turisti. La dashboard interattiva in Power BI consente di esplorare le tendenze nel tempo e la relazione tra i due fattori. Le regressioni hanno permesso di stimare il totale dei prezzi e il numero dei turisti per il mese di dicembre 2024 e di fare previsioni per il 2025.  
+ **È importante notare che le stime sui turisti e sui prezzi di dicembre 2024, così come le previsioni per il 2025, sono indicative e basate sui dati storici disponibili, con l'obiettivo di esplorare le possibili tendenze. Questo progetto è stato realizzato a scopo didattico e di analisi.**
 
 ## Link dataset
 [Dataset Airbnb](https://inumeridibolognametropolitana.it/dati-statistici/turisti-nel-comune-e-nella-citta-metropolitana-di-bologna-serie-storica): Contiene dati sugli affitti brevi nella città di Bologna, estratti dalla piattaforma Inside Airbnb. Include informazioni su prezzi, disponibilità e recensioni.
