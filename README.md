@@ -67,13 +67,11 @@ In questa fase sono stati sviluppati i seguenti passaggi chiave:
 Regressioni:
 
 ![Screenshot 2025-04-04 105631](https://github.com/user-attachments/assets/867bce7e-a939-4280-94af-6f4b659adcb4)
-
 ![Screenshot 2025-04-04 105648](https://github.com/user-attachments/assets/3aa3f8e3-1200-434b-a078-c3d5c087c0ae)
 
 
 
 ![Screenshot 2025-04-04 084230](https://github.com/user-attachments/assets/c034e4bd-e59d-4a0a-ae04-f21a5e95cda4)
-
 ![Screenshot 2025-04-04 084412](https://github.com/user-attachments/assets/6aa24562-2747-465e-b61d-e7e081057692)
 
 
