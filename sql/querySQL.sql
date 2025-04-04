@@ -1,4 +1,3 @@
-```
 CREATE TABLE prezzo_turisti_mensili AS
 WITH num_reviews AS (
     SELECT 
@@ -22,8 +21,6 @@ ORDER BY nr.anno, nr.mese;
 
 
 
-
-
 CREATE TABLE prezzo_turisti_annuali AS
 SELECT 
     anno, 
@@ -32,9 +29,6 @@ SELECT
 FROM prezzo_turisti_mensili    
 GROUP BY anno
 ORDER BY anno;
-
-
-
 
 
 
@@ -47,4 +41,4 @@ FROM reviews
 WHERE EXTRACT(YEAR FROM "date") = 2024  -- Filtro per l'anno 2024
 GROUP BY anno, mese
 ORDER BY anno, mese;
-```
+
