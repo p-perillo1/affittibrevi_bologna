@@ -78,10 +78,11 @@ WHERE EXTRACT(YEAR FROM "date") = 2024  -- Filtro per l'anno 2024
 GROUP BY anno, mese
 ORDER BY anno, mese;
 ```
+Dal risultato della query si nota che i dati di dicembre 2024 sono aggiornati al 19-12-2024.
 ![Screenshot 2025-04-03 232641](https://github.com/user-attachments/assets/a67542f4-0e60-4b7b-b0b3-4664f1e586f8)
 
 #### Regressione Lineare
-È stata implementata una regressione lineare per prevedere il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello. Il database è stato aggiornato con i nuovi dati.
+È stata implementata una regressione polinomiale per calcolare il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello. Il database è stato aggiornato con i nuovi dati.
 
 ![Screenshot 2025-04-04 090013](https://github.com/user-attachments/assets/4a510452-0837-4edf-88ba-31e8783cf5ed)
 
