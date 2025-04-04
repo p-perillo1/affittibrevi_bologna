@@ -42,7 +42,7 @@ In questa fase sono stati sviluppati i seguenti passaggi chiave:
 - **Transform**: I dati sono stati puliti e trasformati rimuovendo i duplicati, le colonne interamente vuote, rinominando in minuscolo e rimuovendo evenutali spazi bianchi da tutte le intestazioni delle colonne.
 I dati transfromati sono stati visualizzati per una prima analisi che ha evidenziato la mancanza dei dati dei turisti di dicembre 2024. Successivamente sono stati eseguiti calcoli per stimare i turisti di dicembre 2024 tramite regressione polinomiale utilizzando i dati di novembre 2024 per testare il modello.
 
-![Screenshot 2025-04-04 080149](https://github.com/user-attachments/assets/ef7eecc1-d49f-4706-b4fa-273fef6a839c)
+![Screenshot 2025-04-04 075414](https://github.com/user-attachments/assets/0230209c-e22d-4cb5-b513-ba7f048d3a0c)
 
 ![Screenshot 2025-04-04 082721](https://github.com/user-attachments/assets/6e9129ba-c41d-49a6-9d57-e511ac85b496)
 
