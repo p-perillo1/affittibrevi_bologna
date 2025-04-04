@@ -74,7 +74,7 @@ Visualizzazione dopo l' aggiunta del valore stimato:
   
 - **SQL**: Creazione di due tabelle aggregate in SQL per visualizzare il numero dei turisti e il totale dei prezzi per anno e mese.
 
-#### Calcolo dei Prezzi Annuali e Mensili
+#### Calcolo dei Prezzi Annuali e Mensili in SQL
 Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di recensioni e il numero minimo di notti per ciascun alloggio, sono stati calcolati i prezzi annuali e mensili con le seguenti formule:
 
 **Prezzo annuale**: Moltiplicando il prezzo per notte di ciascun alloggio per il numero di recensioni e il numero minimo di notti.
