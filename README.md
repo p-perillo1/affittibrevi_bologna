@@ -60,6 +60,7 @@ In questa fase sono stati sviluppati i seguenti passaggi chiave:
 
 ![Screenshot 2025-04-04 095229](https://github.com/user-attachments/assets/390ef775-f726-4494-9379-e5223a105d4a)
 
+
 - **Transform**: I dati sono stati puliti e trasformati rimuovendo i duplicati, eliminando le colonne interamente vuote, rinominando tutte le intestazioni in minuscolo e rimuovendo eventuali spazi bianchi. Durante l'analisi preliminare dei dati trasformati, è stata riscontrata l'assenza dei dati relativi ai turisti di dicembre 2024. Per colmare questa mancanza, nella fase di trasformazione è stata implementata una regressione polinomiale per stimare i valori mancanti. Il modello è stato prima testato utilizzando i dati di novembre 2024 per verificarne l'accuratezza prima di applicarlo alla previsione di dicembre 2024.
 
 
