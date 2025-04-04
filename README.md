@@ -67,6 +67,7 @@ Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati s
 
 ![Screenshot 2025-04-03 224838](https://github.com/user-attachments/assets/fd48088f-93fb-4c39-bf87-68bdcdaf17f6)
 
+```SQL
 SELECT 
     EXTRACT(YEAR FROM "date") AS anno,
     EXTRACT(MONTH FROM "date") AS mese,
