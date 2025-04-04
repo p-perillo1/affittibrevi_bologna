@@ -3,7 +3,7 @@
 Questo progetto si propone di analizzare il mercato degli affitti brevi a Bologna, utilizzando i dataset forniti da Airbnb e dal Comune di Bologna. L'obiettivo principale è analizzare l'andamento dei prezzi e del numero di turisti nel corso degli anni.  
 Sono stati utilizzati dati storici sui prezzi degli affitti brevi e sul numero di turisti per identificare le tendenze, le fluttuazioni e le eventuali correlazioni. Inoltre, sono state sviluppate tecniche di regressione per stimare i prezzi futuri, in particolare per il 2025, usando i dati del 2024 per testare i modelli. Il progetto include la creazione di una dashboard interattiva in Power BI che visualizza l'andamento dei prezzi e dei turisti nel tempo.
 
-![Screenshot 2025-04-04 095002](https://github.com/user-attachments/assets/21db0537-5148-4d80-841b-120a9116a67b)
+![Screenshot 2025-04-04 103903](https://github.com/user-attachments/assets/2edf0b18-5ef6-41e2-8284-80649f2b3e42)
 
 ## Funzionalità della Dashboard in Power BI
 
@@ -62,6 +62,7 @@ Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di
 
 Questi calcoli sono stati effettuati direttamente nel database PostgreSQL utilizzando query SQL per aggregare i dati per anno e mese. Le tabelle risultanti sono state poi utilizzate per l'analisi successiva. È importante notare che, trattandosi di stime, questi prezzi rappresentano una proiezione basata sui dati disponibili e non devono essere considerati come valori assoluti, ma come un'indicazione dei trend del mercato.
 
+-**Tabella prezzi e turisti mensili**
 ![Screenshot 2025-04-03 233043](https://github.com/user-attachments/assets/caa5e7a3-c8cf-4575-90ef-89741d0cd554)
 
 ```SQL
@@ -85,7 +86,7 @@ Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati s
 
 ![Screenshot 2025-04-04 090126](https://github.com/user-attachments/assets/a2a86caa-96d5-460d-981a-1eeb64379f30)
 
-Creazione tabella con i prezzi annuali
+-**Tabella prezzi e turisti annuali**
 ```
 CREATE TABLE prezzo_turisti_annuali AS
 SELECT 
@@ -117,11 +118,9 @@ Una volta completata la fase di costruzione, sono stati eseguiti i seguenti pass
 - **Caricamento dei dati in Power BI**: I dati finali sono stati importati da PostgreSQL in Power BI.
 - **Creazione della dashboard in Power BI**: È stata creata una dashboard interattiva che visualizza i prezzi, i turisti e le loro relazioni nel tempo.
 
-![Screenshot 2025-04-04 003614](https://github.com/user-attachments/assets/c05e8c21-442e-4284-9dad-da242eab7832)
-
-![Screenshot 2025-04-04 004852](https://github.com/user-attachments/assets/025b455c-b69a-487f-84f7-342f3cf76bd8)
-
-![Screenshot 2025-04-04 004824](https://github.com/user-attachments/assets/a24f6e7a-88c6-4ac6-941f-37cde607ab51)
+![Screenshot 2025-04-04 103903](https://github.com/user-attachments/assets/a0428bcd-70b5-4614-8534-91180869b25c)
+![Screenshot 2025-04-04 103955](https://github.com/user-attachments/assets/983cd9c0-dd23-48df-94b8-0d1340b7a3bd)
+![Screenshot 2025-04-04 104019](https://github.com/user-attachments/assets/263ee53f-13ca-4764-87d4-13caf0cd9cc6)
 
 ## Insight
 
@@ -130,7 +129,9 @@ La dashboard mostra l'andamento annuale e mensile dei prezzi degli affitti brevi
 ## Tecnologie Utilizzate
 
 - **Python**: Per la pulizia, trasformazione e analisi dei dati.
+- **NumPy**: Per operazioni numeriche e manipolazione di array.
 - **Pandas**: Per la gestione dei dati.
+- **Matplotlib**: Per la visualizzazione grafica dei dati durante l'analisi esplorativa.
 - **scikit-learn**: Per l'implementazione delle regressioni.
 - **Prophet**: Per la previsione dei prezzi.
 - **SQL**: Per creare e gestire il database PostgreSQL.
