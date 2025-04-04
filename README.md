@@ -37,7 +37,7 @@ In questa fase sono stati sviluppati i seguenti passaggi chiave:
 
 - **Extract**: I dati sono stati estratti dai file CSV (Airbnb e turisti) e caricati in un ambiente di sviluppo.
 
-![Screenshot 2025-04-04 095229](https://github.com/user-attachments/assets/191fdb00-e9cb-44fd-8f6b-40062c595ce7)
+![Screenshot 2025-04-04 095229](https://github.com/user-attachments/assets/03cf261b-cd74-450c-81ad-abeff9b9d13a)
 
 - **Transform**: I dati sono stati puliti e trasformati rimuovendo i duplicati, le colonne interamente vuote, rinominando in minuscolo e rimuovendo evenutali spazi bianchi da tutte le intestazioni delle colonne.
 I dati transfromati sono stati visualizzati per una prima analisi che ha evidenziato la mancanza dei dati dei turisti di dicembre 2024. Successivamente sono stati eseguiti calcoli per stimare i turisti di dicembre 2024 tramite regressione polinomiale utilizzando i dati di novembre 2024 per testare il modello.
@@ -77,6 +77,7 @@ FROM reviews
 WHERE EXTRACT(YEAR FROM "date") = 2024  -- Filtro per l'anno 2024
 GROUP BY anno, mese
 ORDER BY anno, mese;
+```
 ![Screenshot 2025-04-03 232641](https://github.com/user-attachments/assets/a67542f4-0e60-4b7b-b0b3-4664f1e586f8)
 
 #### Regressione Lineare
