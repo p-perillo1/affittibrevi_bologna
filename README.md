@@ -138,7 +138,9 @@ Una volta completata la fase di costruzione, sono stati eseguiti i seguenti pass
 - **Creazione della dashboard in Power BI**: È stata creata una dashboard interattiva che visualizza i prezzi, i turisti e le loro relazioni nel tempo.
 
 ![Screenshot 2025-04-04 104440](https://github.com/user-attachments/assets/c49988f4-3616-4dbd-ab64-40e49c77653e)
+
 ![Screenshot 2025-04-04 103955](https://github.com/user-attachments/assets/983cd9c0-dd23-48df-94b8-0d1340b7a3bd)
+
 ![Screenshot 2025-04-04 104019](https://github.com/user-attachments/assets/263ee53f-13ca-4764-87d4-13caf0cd9cc6)
 
 ## Insight
