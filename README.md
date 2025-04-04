@@ -129,7 +129,7 @@ ORDER BY anno;
 
 Il test con Prophet ha evidenziato come quest'ultimo tenda a sottostimare le previsioni del 2025, questo risultato è probabilmente dovuto ai pochi dati con cui il modello è stato allenato. 
 
-Le previsioni della regressione Lineare con regularizzazione Ridge nonostante i limiti del modello per la previsione su serie temporali tendono ad essere più veritiere.
+Le previsioni della regressione Lineare con regolarizzazione Ridge, nonostante i limiti del modello per la previsione su serie temporali, tendono ad essere più veritiere.
 
 ### Esecuzione (Execute)
 Una volta completata la fase di costruzione, sono stati eseguiti i seguenti passaggi:
