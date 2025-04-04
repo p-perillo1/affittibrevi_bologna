@@ -158,7 +158,7 @@ La dashboard mostra l'andamento annuale e mensile dei prezzi degli affitti brevi
 - **Prophet**: Per la previsione dei prezzi.
 - **SQL**: Per creare e gestire il database PostgreSQL.
 - **Power BI**: Per la visualizzazione dei dati e la creazione della dashboard interattiva.
-- ** Supabase**: Per l'hosting e la gestione del database PostgreSQL.
+- **Supabase**: Per l'hosting e la gestione del database PostgreSQL.
 - **ODBC**: Per la connessione tra PostgreSQL e Power BI.
 
 ## Conclusioni
