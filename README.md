@@ -169,6 +169,7 @@ Il progetto fornisce un'analisi degli affitti brevi a Bologna, con una particola
 
 [Dataset Turisti](https://insideairbnb.com/get-the-data/):  Fornisce dati storici sul numero di turisti a Bologna e nell’area metropolitana.
 
+```
 affittibrevi_bologna/
 ├── python/
 │   ├── extract.py                            # Estrazione dei dati dai file CSV
@@ -186,3 +187,4 @@ affittibrevi_bologna/
 ├── requirements.txt                          # File delle dipendenze del progetto
 ├── sql/                                      # Cartella per script SQL                
 │   └── querySQL.sql                          # Script SQL per eseguire query analitiche sui dati
+```
