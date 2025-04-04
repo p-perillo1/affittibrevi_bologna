@@ -37,6 +37,7 @@ Visualizzazione durante l' analasi esplorativa:
 ![Screenshot 2025-04-04 105906](https://github.com/user-attachments/assets/a2c4bc59-be6e-4c83-82a9-142c8a3067c3)
 
 Sono stati stampati i dati dei turisti per il 2024:
+
 ![Screenshot 2025-04-04 191508](https://github.com/user-attachments/assets/c654630a-b17f-4b8a-8d4a-f2a62cc6fe01)
 
 Dall'output si evince che il valore di dicembre 2024 non è presente:  
