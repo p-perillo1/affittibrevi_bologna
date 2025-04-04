@@ -46,13 +46,16 @@ I dati transfromati sono stati visualizzati per una prima analisi che ha evidenz
 
 
 Visualizzazione durante l' analasi esplorativa
+
 ![Screenshot 2025-04-04 105906](https://github.com/user-attachments/assets/a2c4bc59-be6e-4c83-82a9-142c8a3067c3)
 
 il valore di dicembre 2024 non è presente 
+
 ![Screenshot 2025-04-04 082721](https://github.com/user-attachments/assets/6e9129ba-c41d-49a6-9d57-e511ac85b496)
 
 
 Regressioni
+
 ![Screenshot 2025-04-04 105631](https://github.com/user-attachments/assets/867bce7e-a939-4280-94af-6f4b659adcb4)
 ![Screenshot 2025-04-04 105648](https://github.com/user-attachments/assets/3aa3f8e3-1200-434b-a078-c3d5c087c0ae)
 
@@ -61,6 +64,7 @@ Regressioni
 
 
 Visualizzazione dopo l' aggiunta del valore stimato
+
 ![Screenshot 2025-04-04 110000](https://github.com/user-attachments/assets/ab4ebdfd-8113-4489-bb01-c63e0f70aedd)
 
 
