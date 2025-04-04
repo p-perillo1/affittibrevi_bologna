@@ -113,11 +113,13 @@ ORDER BY anno;
 ![Screenshot 2025-04-04 102404](https://github.com/user-attachments/assets/2a2162f8-7d5f-4070-8452-158e3d176830)
 
 #### Regressione Lineare previsione 2025
-È stata implementata una regressione lineare con regolarizzazione Ridge per calcolare il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello.  
+È stata implementata una regressione lineare con regolarizzazione Ridge per calcolare il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello.
+
 ![Screenshot 2025-04-04 102209](https://github.com/user-attachments/assets/5130f88b-8ca2-4227-8e95-04cf170795e9)
 
 #### Testing con Prophet
-È stato anche testato un modello con Prophet per la previsione dei prezzi del 2025, come ulteriore metodo di verifica.  
+È stato anche testato un modello con Prophet per la previsione dei prezzi del 2025, come ulteriore metodo di verifica. 
+
 ![Screenshot 2025-04-04 090308](https://github.com/user-attachments/assets/85400afd-3171-4cf4-8def-d133781cc913)
 
 Il test con Prophet ha evidenziato come quest'ultimo tenda a sottostimare le previsioni del 2025, questo risultato è probabilmente dovuto ai pochi dati con cui il modello è stato allenato. 
