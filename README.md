@@ -48,7 +48,6 @@ I dati transfromati sono stati visualizzati per una prima analisi che ha evidenz
 
 
 Visualizzazione durante l' analasi esplorativa:
-
 ![Screenshot 2025-04-04 105906](https://github.com/user-attachments/assets/a2c4bc59-be6e-4c83-82a9-142c8a3067c3)
 
 
@@ -72,7 +71,6 @@ Regressioni:
 
 
 Visualizzazione dopo l' aggiunta del valore stimato:
-
 ![Screenshot 2025-04-04 110000](https://github.com/user-attachments/assets/ab4ebdfd-8113-4489-bb01-c63e0f70aedd)
 
 
