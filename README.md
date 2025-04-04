@@ -62,9 +62,6 @@ Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di
 
 Questi calcoli sono stati effettuati direttamente nel database PostgreSQL utilizzando query SQL per aggregare i dati per anno e mese. Le tabelle risultanti sono state poi utilizzate per l'analisi successiva. È importante notare che, trattandosi di stime, questi prezzi rappresentano una proiezione basata sui dati disponibili e non devono essere considerati come valori assoluti, ma come un'indicazione dei trend del mercato.
 
-#### Regressione polinomiale
-Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati sui prezzi di dicembre 2024. È stata quindi implementata una regressione polinomiale per stimare i prezzi di dicembre 2024 e aggiornato il database con i nuovi dati.
-
 ![Screenshot 2025-04-03 224838](https://github.com/user-attachments/assets/fd48088f-93fb-4c39-bf87-68bdcdaf17f6)
 
 ```SQL
@@ -81,14 +78,29 @@ ORDER BY anno, mese;
 Dal risultato della query si nota che i dati di dicembre 2024 sono aggiornati al 19-12-2024.
 ![Screenshot 2025-04-03 232641](https://github.com/user-attachments/assets/a67542f4-0e60-4b7b-b0b3-4664f1e586f8)
 
-
-
-#### Regressione Lineare
-È stata implementata una regressione polinomiale per calcolare il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello. Il database è stato aggiornato con i nuovi dati.
+#### Regressione polinomiale
+Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati sui prezzi di dicembre 2024. È stata quindi implementata una regressione polinomiale per stimare i prezzi di dicembre 2024 e aggiornato il database con i nuovi dati.
 
 ![Screenshot 2025-04-04 090013](https://github.com/user-attachments/assets/4a510452-0837-4edf-88ba-31e8783cf5ed)
 
 ![Screenshot 2025-04-04 090126](https://github.com/user-attachments/assets/a2a86caa-96d5-460d-981a-1eeb64379f30)
+
+```
+CREATE TABLE prezzo_turisti_annuali AS
+SELECT 
+    anno, 
+    SUM(turisti_mensili) AS turisti_annuali,
+    SUM(prezzo_mensile) AS prezzi_annuali
+FROM prezzo_turisti_mensili    
+GROUP BY anno
+ORDER BY anno;
+```
+![Screenshot 2025-04-04 102404](https://github.com/user-attachments/assets/2a2162f8-7d5f-4070-8452-158e3d176830)
+
+#### Regressione Lineare previsione 2025
+È stata implementata una regressione lineare con regularizzazione Ridge per calcolare il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello.
+
+![Screenshot 2025-04-04 102209](https://github.com/user-attachments/assets/5130f88b-8ca2-4227-8e95-04cf170795e9)
 
 #### Testing con Prophet
 È stato anche testato un modello con Prophet per la previsione dei prezzi del 2025, come ulteriore metodo di verifica.
