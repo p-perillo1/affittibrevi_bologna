@@ -120,7 +120,7 @@ ORDER BY anno;
 ![Screenshot 2025-04-04 102404](https://github.com/user-attachments/assets/2a2162f8-7d5f-4070-8452-158e3d176830)
 
 #### Regressione Lineare previsione 2025
-È stata implementata una regressione lineare con regularizzazione Ridge per calcolare il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello.
+È stata implementata una regressione lineare con regolarizzazione Ridge per calcolare il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello.
 
 ![Screenshot 2025-04-04 102209](https://github.com/user-attachments/assets/5130f88b-8ca2-4227-8e95-04cf170795e9)
 
