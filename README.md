@@ -50,6 +50,7 @@ Visualizzazione durante l' analasi esplorativa
 ![Screenshot 2025-04-04 105906](https://github.com/user-attachments/assets/a2c4bc59-be6e-4c83-82a9-142c8a3067c3)
 
 Il valore di dicembre 2024 non è presente 
+
 ![Screenshot 2025-04-04 082721](https://github.com/user-attachments/assets/6e9129ba-c41d-49a6-9d57-e511ac85b496)
 
 
