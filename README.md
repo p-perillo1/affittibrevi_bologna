@@ -130,7 +130,8 @@ ORDER BY anno;
 
 ![Screenshot 2025-04-04 090308](https://github.com/user-attachments/assets/85400afd-3171-4cf4-8def-d133781cc913)
 
-Il test con Prophet ha evidenziato come quest'ultimo tenda a sovrastimare le previsioni del 2025, questo risultato è probabilmente dovuto ai pochi dati con cui il modello è stato allenato. 
+Il test con Prophet ha evidenziato come quest'ultimo tenda a sottostimare le previsioni del 2025, questo risultato è probabilmente dovuto ai pochi dati con cui il modello è stato allenato. 
+
 Le previsioni della regressione Lineare con regularizzazione Ridge nonostante i limiti del modello per la previsione su serie temporali tendono ad essere più veritiere.
 
 ### Esecuzione (Execute)
