@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 from extract import df_tourism, df_listings, df_reviews
-from regressione_turisti_dicembre import apply_regression  # Importiamo la funzione dal file separato
+from regressione_turisti_dicembre_2024 import apply_regression  # Importiamo la funzione dal file separato
 
 # Dizionario per gestire i DataFrame
 dfs = {
