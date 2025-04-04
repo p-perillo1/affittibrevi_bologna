@@ -71,8 +71,7 @@ Visualizzazione dopo l' aggiunta del valore stimato:
 - **Load**: I dati trasformati sono stati caricati in un database PostgreSQL utilizzando Supabase.  
 ![Screenshot 2025-04-04 084849](https://github.com/user-attachments/assets/a42d5a08-5b5e-489a-926d-8e7ce207423a)
   
-- **SQL**: Creazione di due tabelle aggregate in SQL per visualizzare il numero dei turisti e il totale dei prezzi per anno e mese.  
-
+- **SQL**: Creazione di due tabelle aggregate in SQL per visualizzare il numero dei turisti e il totale dei prezzi per anno e mese.    
 #### Calcolo dei Prezzi Annuali e Mensili in SQL
 Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di recensioni e il numero minimo di notti per ciascun alloggio, sono stati calcolati i prezzi annuali e mensili con le seguenti formule:
 
@@ -82,8 +81,7 @@ Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di
 Questi calcoli sono stati effettuati direttamente nel database PostgreSQL utilizzando query SQL per aggregare i dati per anno e mese. Le tabelle risultanti sono state poi utilizzate per l'analisi successiva.   
 **È importante notare che, trattandosi di stime, questi prezzi rappresentano una proiezione basata sui dati disponibili e non devono essere considerati come valori assoluti, ma come un'indicazione dei trend del mercato.**
 
-Tabella prezzi e turisti mensili:
-
+Tabella prezzi e turisti mensili:  
 ![Screenshot 2025-04-03 233043](https://github.com/user-attachments/assets/caa5e7a3-c8cf-4575-90ef-89741d0cd554)
 
 ```SQL
@@ -97,17 +95,16 @@ WHERE EXTRACT(YEAR FROM "date") = 2024  -- Filtro per l'anno 2024
 GROUP BY anno, mese
 ORDER BY anno, mese;
 ```
-Dal risultato della query si nota che i dati di dicembre 2024 sono aggiornati al 19-12-2024:
+Dal risultato della query si nota che i dati di dicembre 2024 sono aggiornati al 19-12-2024:  
 ![Screenshot 2025-04-03 232641](https://github.com/user-attachments/assets/aba029c1-7aa2-48e0-a71c-52d1e9263caa)
 
 #### Regressione polinomiale
-Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati sui prezzi di dicembre 2024. È stata quindi implementata una regressione polinomiale per stimare i prezzi di dicembre 2024 e aggiornato il database con i nuovi dati.
-
+Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati sui prezzi di dicembre 2024. È stata quindi implementata una regressione polinomiale per stimare i prezzi di dicembre 2024 e aggiornato il database con i nuovi dati.  
 ![Screenshot 2025-04-04 090013](https://github.com/user-attachments/assets/4a510452-0837-4edf-88ba-31e8783cf5ed)
 
 ![Screenshot 2025-04-04 090126](https://github.com/user-attachments/assets/a2a86caa-96d5-460d-981a-1eeb64379f30)
 
-Tabella prezzi e turisti annuali:
+Tabella prezzi e turisti annuali:  
 
 ```SQL
 CREATE TABLE prezzo_turisti_annuali AS
@@ -122,13 +119,11 @@ ORDER BY anno;
 ![Screenshot 2025-04-04 102404](https://github.com/user-attachments/assets/2a2162f8-7d5f-4070-8452-158e3d176830)
 
 #### Regressione Lineare previsione 2025
-È stata implementata una regressione lineare con regolarizzazione Ridge per calcolare il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello.
-
+È stata implementata una regressione lineare con regolarizzazione Ridge per calcolare il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello.  
 ![Screenshot 2025-04-04 102209](https://github.com/user-attachments/assets/5130f88b-8ca2-4227-8e95-04cf170795e9)
 
 #### Testing con Prophet
-È stato anche testato un modello con Prophet per la previsione dei prezzi del 2025, come ulteriore metodo di verifica.
-
+È stato anche testato un modello con Prophet per la previsione dei prezzi del 2025, come ulteriore metodo di verifica.  
 ![Screenshot 2025-04-04 090308](https://github.com/user-attachments/assets/85400afd-3171-4cf4-8def-d133781cc913)
 
 Il test con Prophet ha evidenziato come quest'ultimo tenda a sottostimare le previsioni del 2025, questo risultato è probabilmente dovuto ai pochi dati con cui il modello è stato allenato. 
