@@ -168,3 +168,21 @@ Il progetto fornisce un'analisi degli affitti brevi a Bologna, con una particola
 [Dataset Airbnb](https://inumeridibolognametropolitana.it/dati-statistici/turisti-nel-comune-e-nella-citta-metropolitana-di-bologna-serie-storica): Contiene dati sugli affitti brevi nella città di Bologna, estratti dalla piattaforma Inside Airbnb. Include informazioni su prezzi, disponibilità e recensioni.
 
 [Dataset Turisti](https://insideairbnb.com/get-the-data/):  Fornisce dati storici sul numero di turisti a Bologna e nell’area metropolitana.
+
+affittibrevi_bologna/
+├── python/
+│   ├── extract.py                            # Estrazione dei dati dai file CSV
+│   ├── transform.py                          # Trasformazione dei dati per il modello
+│   ├── load.py                               # Caricamento dei dati nel database PostgreSQL
+│   ├── main.py                               # Script principale che esegue l'intero processo ETL
+│   ├── regressione_turisti_novembre_2024.py  # Modello di regressione per turisti a novembre 2024
+│   ├── regressione_turisti_dicembre_2024.py  # Modello di regressione per turisti a dicembre 2024
+│   ├── regressione_prezzi_novembre_2024.py   # Modello di regressione per prezzi a novembre 2024
+│   ├── regressione_prezzi_dicembre_2024.py   # Modello di regressione per prezzi a dicembre 2024
+│   ├── regressione_ridge_test_2024_previsione_2025.py  # Modello di regressione Ridge per previsione 2025
+│   ├── prophet.py                            # Modello Prophet per previsioni di serie temporali
+│   └── env.py                                # File di configurazione ambientale (e.g. variabili di ambiente)
+├── README.md                                 # Questo file
+├── requirements.txt                          # File delle dipendenze del progetto
+├── sql/                                      # Cartella per script SQL                
+│   └── querySQL.sql                          # Script SQL per eseguire query analitiche sui dati
