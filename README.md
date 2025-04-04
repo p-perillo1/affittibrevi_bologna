@@ -5,11 +5,6 @@ Sono stati utilizzati dati storici sui prezzi degli affitti brevi e sul numero d
 
 ![Screenshot 2025-04-04 003614](https://github.com/user-attachments/assets/297501ab-5108-4b3b-86cf-230f479620e9)
 
-
-## Insight
-
-La dashboard mostra l'andamento annuale e mensile dei prezzi degli affitti brevi a Bologna e il numero di turisti. Gli insight ottenuti dalle analisi mostrano una crescita continua dei prezzi in coincidenza con l'aumento dei turisti. È stato osservato un picco nei prezzi degli affitti brevi durante i mesi di maggio, luglio e ottobre. I quartieri centrali tendono ad avere prezzi medi più alti, mentre i quartieri periferici offrono tariffe più basse, ma con una crescita più rapida nei prezzi.
-
 ## Funzionalità della Dashboard in Power BI
 
 La dashboard fornisce le seguenti visualizzazioni:
@@ -17,14 +12,10 @@ La dashboard fornisce le seguenti visualizzazioni:
 - **Prezzi per anno**: Analisi dei prezzi totali degli affitti brevi per ogni anno.
 - **Turisti per anno**: Numero totale di turisti che hanno visitato Bologna ogni anno.
 - **Prezzi e turisti per anno**: Relazione tra i prezzi degli affitti brevi e il numero di turisti per anno.
-- **Prezzi mese per mese per anno**: Andamento dei prezzi mese per mese per ogni anno.
-- **Prezzi medi per quartiere**: Visualizzazione dei prezzi medi degli affitti brevi nei diversi quartieri di Bologna.
+- **Prezzi per mese e anno**: Andamento dei prezzi mese per mese per ogni anno.
+- **Prezzi medi per quartiere e conteggio host**: Visualizzazione dei prezzi medi degli affitti brevi nei diversi quartieri di Bologna e il conteggio degli host
+- **Mappa con le distrubizioni degli alloggi**: Visualizzazione di una mappa interattiva con la distrubuzione degli alloggi con colori differenti per ogni quartiere.
 - **Variazione percentuale dei prezzi rispetto all'anno precedente**: Analisi della variazione percentuale dei prezzi rispetto all'anno precedente.
-
-![Screenshot 2025-04-04 004852](https://github.com/user-attachments/assets/9976c13f-61f7-4889-84b1-4204758d2772)
-
-![Screenshot 2025-04-04 004824](https://github.com/user-attachments/assets/539fb9e2-181b-4ca4-83b4-4e59e739688a)
-
 
 ## Flusso di Lavoro
 
@@ -37,14 +28,29 @@ Durante la fase di pianificazione, sono stati definiti gli obiettivi principali 
 In questa fase sono stati analizzati i dati per identificare eventuali problematiche nei dataset:
 - Durante l'analisi esplorativa dei dati (EDA), è stato notato che i dati sui turisti erano già aggregati mensilmente, ma il dataset non includeva i dati di dicembre 2024. Questo ha portato alla necessità di implementare una regressione polinomiale per stimare i turisti mancanti di dicembre 2024.
 
+![Screenshot 2025-04-04 075414](https://github.com/user-attachments/assets/6f2d6761-3573-4410-9138-7352cf0b82a4)
+
 ### Costruzione (Construct)
 In questa fase sono stati sviluppati i seguenti passaggi chiave:
 
 #### ETL (Extract, Transform, Load)
 
 - **Extract**: I dati sono stati estratti dai file CSV (Airbnb e turisti) e caricati in un ambiente di sviluppo.
-- **Transform**: I dati sono stati puliti e trasformati rimuovendo i duplicati e le colonne interamente vuote. In particolare, sono stati eseguiti calcoli per stimare i prezzi di dicembre 2024 tramite regressione polinomiale utilizzando i dati di novembre 2024 per testare il modello.
+- **Transform**: I dati sono stati puliti e trasformati rimuovendo i duplicati, le colonne interamente vuote, rinominando in minuscolo e rimuovendo evenutali spazi bianchi da tutte le intestazioni delle colonne.
+I dati transfromati sono stati visualizzati per una prima analisi che ha evidenziato la mancanza dei dati dei turisti di dicembre 2024. Successivamente sono stati eseguiti calcoli per stimare i turisti di dicembre 2024 tramite regressione polinomiale utilizzando i dati di novembre 2024 per testare il modello.
 - **Load**: I dati trasformati sono stati caricati in un database PostgreSQL utilizzando Supabase.
+  
+![Screenshot 2025-04-04 080149](https://github.com/user-attachments/assets/1a46ccf2-a815-4485-8cf8-b2997f6b432e)
+
+![Screenshot 2025-04-04 080149](https://github.com/user-attachments/assets/ef7eecc1-d49f-4706-b4fa-273fef6a839c)
+
+![Screenshot 2025-04-04 082721](https://github.com/user-attachments/assets/6e9129ba-c41d-49a6-9d57-e511ac85b496)
+
+![Screenshot 2025-04-04 084230](https://github.com/user-attachments/assets/c034e4bd-e59d-4a0a-ae04-f21a5e95cda4)
+![Screenshot 2025-04-04 084412](https://github.com/user-attachments/assets/6aa24562-2747-465e-b61d-e7e081057692)
+
+![Screenshot 2025-04-04 084849](https://github.com/user-attachments/assets/a42d5a08-5b5e-489a-926d-8e7ce207423a)
+
 - **SQL**: Creazione di due tabelle aggregate in SQL per visualizzare il numero dei turisti e il totale dei prezzi per anno e mese.
 
 #### Calcolo dei Prezzi Annuali e Mensili
@@ -57,17 +63,49 @@ Questi calcoli sono stati effettuati direttamente nel database PostgreSQL utiliz
 #### Regressione polinomiale
 Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati sui prezzi di dicembre 2024. È stata quindi implementata una regressione polinomiale per stimare i prezzi di dicembre 2024 e aggiornato il database con i nuovi dati.
 
+![Screenshot 2025-04-03 224838](https://github.com/user-attachments/assets/fd48088f-93fb-4c39-bf87-68bdcdaf17f6)
+
+SELECT 
+    EXTRACT(YEAR FROM "date") AS anno,
+    EXTRACT(MONTH FROM "date") AS mese,
+    COUNT(*) AS numero_recensioni,
+    MAX("date") AS ultima_recensione
+FROM reviews  
+WHERE EXTRACT(YEAR FROM "date") = 2024  -- Filtro per l'anno 2024
+GROUP BY anno, mese
+ORDER BY anno, mese;
+![Screenshot 2025-04-03 232641](https://github.com/user-attachments/assets/a67542f4-0e60-4b7b-b0b3-4664f1e586f8)
+
 #### Regressione Lineare
-È stata implementata una regressione lineare per prevedere il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello.
+È stata implementata una regressione lineare per prevedere il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello. Il database è stato aggiornato con i nuovi dati.
+
+![Screenshot 2025-04-04 090013](https://github.com/user-attachments/assets/4a510452-0837-4edf-88ba-31e8783cf5ed)
+
+![Screenshot 2025-04-04 090126](https://github.com/user-attachments/assets/a2a86caa-96d5-460d-981a-1eeb64379f30)
 
 #### Testing con Prophet
 È stato anche testato un modello con Prophet per la previsione dei prezzi, come ulteriore metodo di verifica.
+
+![Screenshot 2025-04-04 090308](https://github.com/user-attachments/assets/85400afd-3171-4cf4-8def-d133781cc913)
+
+Il test con Prophet ha evidenziato come quest'ultimo tenda a sovrastimare le previsioni del 2025, questo risultato è probabilmente dovuto ai pochi dati con cui il modello è stato allenato. 
+Le previsioni della regressione Lineare con regularizzazione Ridge nonostante i limiti del modello per la previsione su serie temporali tendono ad essere più veritiere.
 
 ### Esecuzione (Execute)
 Una volta completata la fase di costruzione, sono stati eseguiti i seguenti passaggi:
 
 - **Caricamento dei dati in Power BI**: I dati finali sono stati importati da PostgreSQL in Power BI.
 - **Creazione della dashboard in Power BI**: È stata creata una dashboard interattiva che visualizza i prezzi, i turisti e le loro relazioni nel tempo.
+
+![Screenshot 2025-04-04 003614](https://github.com/user-attachments/assets/c05e8c21-442e-4284-9dad-da242eab7832)
+
+![Screenshot 2025-04-04 004852](https://github.com/user-attachments/assets/025b455c-b69a-487f-84f7-342f3cf76bd8)
+
+![Screenshot 2025-04-04 004824](https://github.com/user-attachments/assets/a24f6e7a-88c6-4ac6-941f-37cde607ab51)
+
+## Insight
+
+La dashboard mostra l'andamento annuale e mensile dei prezzi degli affitti brevi a Bologna e il numero di turisti. Gli insight ottenuti dalle analisi mostrano una forte descrescita nel 2020 dovuta al COVID, dal 2021 si nota una crescita continua dei prezzi in coincidenza con l'aumento dei turisti. È stato osservato un picco nei prezzi degli affitti brevi durante i mesi di maggio, luglio e ottobre. I quartieri centrali tendono ad avere prezzi medi più alti ed un maggior numero di alloggi, nonostante ciò la differenza tra i prezzi medi dei vari quartieri tende ad essere bassa.
 
 ## Tecnologie Utilizzate
 
