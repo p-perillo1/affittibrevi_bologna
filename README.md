@@ -76,7 +76,7 @@ GROUP BY anno, mese
 ORDER BY anno, mese;
 ```
 Dal risultato della query si nota che i dati di dicembre 2024 sono aggiornati al 19-12-2024.
-![Screenshot 2025-04-03 232641](https://github.com/user-attachments/assets/a67542f4-0e60-4b7b-b0b3-4664f1e586f8)
+![Screenshot 2025-04-03 232641](https://github.com/user-attachments/assets/aba029c1-7aa2-48e0-a71c-52d1e9263caa)
 
 #### Regressione polinomiale
 Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati sui prezzi di dicembre 2024. È stata quindi implementata una regressione polinomiale per stimare i prezzi di dicembre 2024 e aggiornato il database con i nuovi dati.
@@ -85,6 +85,7 @@ Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati s
 
 ![Screenshot 2025-04-04 090126](https://github.com/user-attachments/assets/a2a86caa-96d5-460d-981a-1eeb64379f30)
 
+Creazione tabella con i prezzi annuali
 ```
 CREATE TABLE prezzo_turisti_annuali AS
 SELECT 
