@@ -76,8 +76,8 @@ Visualizzazione dopo l' aggiunta del valore stimato:
 
 #### Calcolo dei Prezzi Annuali e Mensili
 Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di recensioni e il numero minimo di notti per ciascun alloggio, sono stati calcolati i prezzi annuali e mensili con le seguenti formule:
-- Prezzo annuale: Moltiplicando il prezzo per notte di ciascun alloggio per il numero di recensioni e il numero minimo di notti.
-- Prezzo mensile: Calcolato come il prezzo annuale diviso per 12.
+- **Prezzo annuale**: Moltiplicando il prezzo per notte di ciascun alloggio per il numero di recensioni e il numero minimo di notti.
+- **Prezzo mensile**: Calcolato come il prezzo annuale diviso per 12.
 
 Questi calcoli sono stati effettuati direttamente nel database PostgreSQL utilizzando query SQL per aggregare i dati per anno e mese. Le tabelle risultanti sono state poi utilizzate per l'analisi successiva. **È importante notare che, trattandosi di stime, questi prezzi rappresentano una proiezione basata sui dati disponibili e non devono essere considerati come valori assoluti, ma come un'indicazione dei trend del mercato.**
 
@@ -106,7 +106,7 @@ Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati s
 
 ![Screenshot 2025-04-04 090126](https://github.com/user-attachments/assets/a2a86caa-96d5-460d-981a-1eeb64379f30)
 
--Tabella prezzi e turisti annuali
+Tabella prezzi e turisti annuali:
 
 ```SQL
 CREATE TABLE prezzo_turisti_annuali AS
