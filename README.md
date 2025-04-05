@@ -30,7 +30,7 @@ Durante l'analisi esplorativa dei dati (EDA), è stato notato che i dati sui tur
 
 Gli screenshot seguenti mostrano i risultati dell'analisi descrittiva (describe() e info()) sui dati, e le visualizzazioni che hanno evidenziato la mancanza dei dati di dicembre 2024:
 
-Esempio di analisi descrittiva sul dataframe reviews:  
+Esempio di analisi descrittiva sul dataframe `Reviews`:  
 ![Screenshot 2025-04-04 075414](https://github.com/user-attachments/assets/6f2d6761-3573-4410-9138-7352cf0b82a4)
 
 Visualizzazione durante l' analasi esplorativa:  
