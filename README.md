@@ -71,7 +71,7 @@ Visualizzazione dopo l' aggiunta del valore stimato:
 ![Screenshot 2025-04-04 084849](https://github.com/user-attachments/assets/a42d5a08-5b5e-489a-926d-8e7ce207423a)
       
 #### Calcolo dei Prezzi e Turisti Annuali e Mensili in SQL
-Sono state create due tabelle aggregate in SQL per analizzare i prezzi e i flussi turistici su base mensile e annuale.
+Sono state create due tabelle aggregate in SQL per analizzare i prezzi e i flussi turistici su base mensile e annuale.  
 Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di recensioni e il numero minimo di notti per ciascun alloggio, sono stati calcolati i prezzi annuali e mensili con le seguenti formule:
 
 **Prezzo annuale**: Moltiplicando il prezzo per notte di ciascun alloggio per il numero di recensioni e il numero minimo di notti.  
