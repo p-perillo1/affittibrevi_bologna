@@ -85,6 +85,7 @@ Questi calcoli sono stati effettuati direttamente nel database PostgreSQL utiliz
 **È importante notare che, trattandosi di stime, questi prezzi rappresentano una proiezione basata sui dati disponibili e non devono essere considerati come valori assoluti, ma come un'indicazione dei trend del mercato.**
 
 Tabella prezzi e turisti mensili:  
+```SQL
 CREATE TABLE prezzo_turisti_mensili AS
 WITH num_reviews AS (
     SELECT 
@@ -105,6 +106,7 @@ JOIN num_reviews nr ON l.id = nr.listing_id  -- Associa listings con il numero d
 JOIN tourism t ON nr.anno = t.anno AND nr.mese = t.mese_num  -- Associa il risultato del primo join a tourism
 GROUP BY nr.anno, nr.mese, t.numero
 ORDER BY nr.anno, nr.mese;
+```
 
 ![Screenshot 2025-04-03 233043](https://github.com/user-attachments/assets/caa5e7a3-c8cf-4575-90ef-89741d0cd554)
 
