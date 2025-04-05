@@ -20,12 +20,12 @@ explore_data(dfs)
 
 # 2. Pulizia dati
 def clean_data(df):
-    df.columns = df.columns.str.strip()  # Rimuovi spazi bianchi dalle intestazioni
-    df = df.rename(columns=str.lower)  # Converti le intestazioni in minuscolo
-    df = df.drop_duplicates()  # Applica drop_duplicates
-    df = df.dropna(how="all", axis=1)  # Applica dropna
+    df.columns = df.columns.str.strip()  # Rimuove spazi bianchi dalle intestazioni
+    df = df.rename(columns=str.lower)    # Converte i nomi delle colonne in minuscolo
+    df = df.drop_duplicates()            # Rimuove i duplicati
+    df = df.dropna(how="all", axis=1)    # Rimuove colonne con tutti i valori NaN
     if 'date' in df.columns:
-        df['date'] = pd.to_datetime(df['date'], errors='coerce')  # Converti la colonna date in datetime
+        df['date'] = pd.to_datetime(df['date'], errors='coerce')  # Converte la colonna date in datetime
     return df
 
 
