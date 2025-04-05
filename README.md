@@ -98,7 +98,7 @@ WITH num_reviews AS (
 )
 SELECT 
     nr.anno, 
-    nr.mese,  -- Visualizza il nome del mese in formato numerico
+    nr.mese,  
     SUM(l.price * l.minimum_nights * nr.num_reviews_in_month) AS prezzo_mensile,  -- Moltiplica il prezzo per il minimo di notti e il numero di recensioni
     t.numero AS turisti_mensili
 FROM listings l
