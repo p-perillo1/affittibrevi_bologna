@@ -144,7 +144,9 @@ Una volta completata la fase di costruzione, sono stati eseguiti i seguenti pass
 
 ## Insight
 
-La dashboard mostra l'andamento annuale e mensile dei prezzi degli affitti brevi a Bologna e il numero di turisti. Gli insight ottenuti dalle analisi mostrano una forte descrescita nel 2020 dovuta al COVID, dal 2021 si nota una crescita continua dei prezzi in coincidenza con l'aumento dei turisti. È stato osservato un picco nei prezzi degli affitti brevi durante i mesi di maggio, luglio e ottobre. I quartieri centrali tendono ad avere prezzi medi più alti ed un maggior numero di alloggi, nonostante ciò la differenza tra i prezzi medi dei vari quartieri tende ad essere bassa.
+La dashboard mostra l’andamento annuale e mensile dei prezzi degli affitti brevi a Bologna, in relazione al numero di turisti. I dati evidenziano un forte calo nel 2020 a causa della pandemia da COVID-19, seguito da una ripresa costante a partire dal 2021.  
+Nel 2023 si è registrato un marcato incremento del flusso turistico, con valori che hanno superato sensibilmente quelli del periodo pre-pandemia.   Nel 2024 la crescita è proseguita, seppur con un ritmo più moderato, a conferma di una tendenza positiva e consolidata nel settore turistico.
+Dal punto di vista stagionale, si osservano picchi nei prezzi degli affitti brevi nei mesi di maggio, luglio e ottobre. I quartieri centrali (come Santo Stefano, Porto-Saragozza) presentano prezzi medi più elevati e un maggior numero di alloggi disponibili.  
 Per i proprietari che affittano su Airbnb, l’analisi suggerisce di adeguare le tariffe con un incremento annuale del 5-8%, soprattutto nei mesi ad alta domanda. Allo stesso tempo, le autorità locali potrebbero considerare politiche di regolamentazione per tutelare l’equilibrio tra esigenze turistiche e diritto all’abitare nei quartieri più centrali.
 
 ## Tecnologie Utilizzate
