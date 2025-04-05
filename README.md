@@ -140,8 +140,7 @@ Per questo motivo il 2024 è stato escluso dal training ed è stato utilizzato s
 
 Il test condotto con Prophet ha evidenziato una sottostima delle previsioni per il 2025. Questo comportamento è probabilmente attribuibile alla scarsità di dati disponibili per l’addestramento, che ha limitato la capacità del modello di cogliere appieno le dinamiche di lungo periodo.
 
-Al contrario, le previsioni ottenute tramite regressione lineare con regolarizzazione Ridge, pur non essendo progettate specificamente per la modellazione di serie temporali, si sono rivelate più coerenti con l’andamento osservato.
-Nonostante i limiti intrinseci del modello e la quantità ridotta di dati, la sua semplicità ha permesso di catturare meglio il trend di crescita rispetto a Prophet.
+Al contrario, la regressione lineare con regolarizzazione Ridge, pur non essendo progettata per la modellazione di serie temporali, ha prodotto previsioni più coerenti con il trend osservato. Nonostante i limiti del modello e la quantità ridotta di dati utilizzata per l'addestramento, la regressione lineare ha saputo cogliere in maniera più efficace la tendenza di crescita rispetto a Prophet.
 
 ### Esecuzione (Execute)
 Una volta completata la fase di costruzione, sono stati eseguiti i seguenti passaggi:
