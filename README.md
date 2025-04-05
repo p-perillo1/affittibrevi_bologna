@@ -19,7 +19,7 @@ La dashboard fornisce le seguenti visualizzazioni:
 
 ## Flusso di Lavoro
 
-Il flusso di lavoro del progetto segue il framework PACE (Plan, Analyze, Construct, Execute), studiato durante la specializzazione *Google Advanced Data Analytics*, con il supporto di un flusso ETL per l'estrazione, trasformazione e caricamento dei dati nel database. Il flusso completo è strutturato come segue:
+Il flusso di lavoro del progetto segue il framework **PACE (Plan, Analyze, Construct, Execute)**, studiato durante la specializzazione *Google Advanced Data Analytics*, con il supporto di un flusso ETL per l'estrazione, trasformazione e caricamento dei dati nel database. Il flusso completo è strutturato come segue:
 
 ### Pianificazione (Plan)
 Durante la fase di pianificazione, sono stati definiti gli obiettivi principali del progetto: visualizzare l'andamento dei prezzi e dei turisti nel tempo e prevedere i prezzi del 2025. È stato stabilito l'ambito del progetto, inclusa la scelta dei dataset.
