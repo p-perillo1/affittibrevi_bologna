@@ -122,7 +122,7 @@ ORDER BY anno;
 #### Regressione Lineare previsione 2025
 È stata implementata una regressione lineare con regolarizzazione Ridge per calcolare il totale dei prezzi del 2025 utilizzando i dati del 2024 per valutare il modello.
 
-![Screenshot 2025-04-04 102209](https://github.com/user-attachments/assets/5130f88b-8ca2-4227-8e95-04cf170795e9)
+![Screenshot 2025-04-05 195637](https://github.com/user-attachments/assets/0eea946e-1a3e-4bbe-91f7-d35688960393)
 
 Per trattare la variabile "mese", si è utilizzata una tecnica di codifica ciclica. I mesi dell'anno sono stati trasformati in due nuove colonne: seno e coseno.  
 Questo approccio consente al modello di catturare la periodicità del calendario, evitando che mesi consecutivi ma numericamente distanti, come dicembre(12) e gennaio(1), vengano interpretati come lontani nel tempo.
