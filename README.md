@@ -124,14 +124,24 @@ ORDER BY anno;
 
 ![Screenshot 2025-04-04 102209](https://github.com/user-attachments/assets/5130f88b-8ca2-4227-8e95-04cf170795e9)
 
+Per trattare la variabile "mese",si è utilizzata una tecnica di codifica ciclica. I mesi dell'anno sono stati trasformati in due nuove colonne: seno e coseno.  
+Questo approccio consente al modello di catturare la periodicità del calendario, evitando che mesi consecutivi ma numericamente distanti, come dicembre(12) e gennaio(1), vengano interpretati come lontani nel tempo.
+
+Per addestrare il modello sono stati utlizzati i dati del 2022 e 2023, in questo modo si è cercato di catturare una dinamica più stabile e coerente con la realtà post-pandemica. Gli anni precedenti (2019–2021) sono stati esclusi per via della forte variabilità dovuta alla pandemia.
+
+Analizzando i dati è emerso che la crescita tra il 2023 e il 2024 è stata inferiore rispetto agli anni precedenti. Questo ha introdotto una fluttuazione temporanea nei trend che avrebbe potuto distorcere le previsioni a del modello.  
+L'inclusione del 2024 nel set di addestramento avrebbe spinto il modello ad adattarsi a questa anomalia di crescita ridotta, compromettendo la capacità predittiva per i periodi successivi.   
+Per questo motivo il 2024 è stato escluso dal training ed è stato utilizzato solo come dato di test, in modo da valutare il modello su dati reali ma non influenzarne l’addestramento.  
+
 #### Testing con Prophet
 È stato anche testato un modello con Prophet per la previsione dei prezzi del 2025, come ulteriore metodo di verifica. 
 
 ![Screenshot 2025-04-04 090308](https://github.com/user-attachments/assets/85400afd-3171-4cf4-8def-d133781cc913)
 
-Il test con Prophet ha evidenziato come quest'ultimo tenda a sottostimare le previsioni del 2025, questo risultato è probabilmente dovuto ai pochi dati con cui il modello è stato allenato. 
+Il test condotto con Prophet ha evidenziato una sottostima delle previsioni per il 2025. Questo comportamento è probabilmente attribuibile alla scarsità di dati disponibili per l’addestramento, che ha limitato la capacità del modello di cogliere appieno le dinamiche di lungo periodo.
 
-Le previsioni della regressione Lineare con regolarizzazione Ridge, nonostante i limiti del modello per la previsione su serie temporali, tendono ad essere più veritiere.
+Al contrario, le previsioni ottenute tramite regressione lineare con regolarizzazione Ridge, pur non essendo progettate specificamente per la modellazione di serie temporali, si sono rivelate più coerenti con l’andamento osservato.
+Nonostante i limiti intrinseci del modello e la quantità ridotta di dati, la sua semplicità ha permesso di catturare meglio il trend di crescita rispetto a Prophet.
 
 ### Esecuzione (Execute)
 Una volta completata la fase di costruzione, sono stati eseguiti i seguenti passaggi:
