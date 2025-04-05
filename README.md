@@ -145,6 +145,7 @@ Una volta completata la fase di costruzione, sono stati eseguiti i seguenti pass
 ## Insight
 
 La dashboard mostra l'andamento annuale e mensile dei prezzi degli affitti brevi a Bologna e il numero di turisti. Gli insight ottenuti dalle analisi mostrano una forte descrescita nel 2020 dovuta al COVID, dal 2021 si nota una crescita continua dei prezzi in coincidenza con l'aumento dei turisti. È stato osservato un picco nei prezzi degli affitti brevi durante i mesi di maggio, luglio e ottobre. I quartieri centrali tendono ad avere prezzi medi più alti ed un maggior numero di alloggi, nonostante ciò la differenza tra i prezzi medi dei vari quartieri tende ad essere bassa.
+Per i proprietari che affittano su Airbnb, l’analisi suggerisce di adeguare le tariffe con un incremento annuale del 5-8%, soprattutto nei mesi ad alta domanda. Allo stesso tempo, le autorità locali potrebbero considerare politiche di regolamentazione per tutelare l’equilibrio tra esigenze turistiche e diritto all’abitare nei quartieri più centrali.
 
 ## Tecnologie Utilizzate
 
@@ -162,7 +163,8 @@ La dashboard mostra l'andamento annuale e mensile dei prezzi degli affitti brevi
 ## Conclusioni
 Il progetto fornisce un'analisi degli affitti brevi a Bologna, con una particolare attenzione all'andamento dei prezzi e al numero di turisti.       
 La dashboard interattiva in Power BI consente di esplorare le tendenze nel tempo e la relazione tra i due fattori.   
-Le regressioni hanno permesso di stimare il totale dei prezzi e il numero dei turisti per il mese di dicembre 2024 e di fare previsioni per il 2025.  
+Le regressioni hanno permesso di stimare il totale dei prezzi e il numero dei turisti per il mese di dicembre 2024 e di fare previsioni per il 2025. 
+La crescita costante del numero di turisti è accompagnata da un aumento delle recensioni e dei prezzi medi, suggerendo che l’affitto breve è ormai parte integrante dell’ecosistema turistico cittadino.   
  **È importante notare che le stime sui turisti e sui prezzi di dicembre 2024, così come le previsioni per il 2025, sono indicative e basate sui dati storici disponibili, con l'obiettivo di esplorare le possibili tendenze.  
 Questo progetto è stato realizzato a scopo didattico e di analisi.**
 
