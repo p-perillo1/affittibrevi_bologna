@@ -77,10 +77,7 @@ print(f"RMSE (Training, descalato): {rmse_train_descaled:.4f}")
 print(f"RMSE (Test, descalato): {rmse_test_descaled:.4f}")
 
 
-
-
-
-# Converti il valore previsto in un tipo float nativo di Python
+# Converte il valore previsto in un tipo float nativo di Python
 previsione_dicembre_2024 = int(previsione_dicembre_2024)
 
 # Crea la query SQL con segnaposti
@@ -97,10 +94,7 @@ params = {
     'mese': 12
 }
 
-# Esegui la query con gestione degli errori
-# Esegui la query con gestione degli errori
-
-with engine.begin() as connection:  # Usa engine.begin() per gestire automaticamente la transazione
+with engine.begin() as connection:  
     connection.execute(query, params)
     print("Dati aggiornati con successo per Dicembre 2024")
 
