@@ -99,7 +99,7 @@ Dal risultato della query si nota che i dati di dicembre 2024 sono aggiornati al
 ![Screenshot 2025-04-03 232641](https://github.com/user-attachments/assets/aba029c1-7aa2-48e0-a71c-52d1e9263caa)
 
 #### Regressioni polinomiali per i prezzi di dicembre 2024
-Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati sui prezzi di dicembre 2024. È stata quindi implementata una regressione polinomiale per stimare i prezzi di dicembre 2024, testando il modello sui dati di novembre 2024, e aggiornato il database con i nuovi dati.
+Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati sui prezzi di dicembre 2024. È stata quindi implementata una regressione polinomiale per stimare i prezzi di dicembre 2024, testando il modello sui dati di novembre 2024. Successivamente il database è stato aggiornato con i nuovi dati.
 
 ![Screenshot 2025-04-04 090013](https://github.com/user-attachments/assets/4a510452-0837-4edf-88ba-31e8783cf5ed)
 
