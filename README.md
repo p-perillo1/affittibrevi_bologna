@@ -164,7 +164,7 @@ Per i proprietari che affittano su Airbnb, l’analisi suggerisce di adeguare le
 
 ## Conclusioni
 Il progetto fornisce un'analisi degli affitti brevi a Bologna, con una particolare attenzione all'andamento dei prezzi e al numero di turisti.       
-La dashboard interattiva in Power BI consente di esplorare le tendenze nel tempo e la relazione tra i due fattori.    
+La dashboard interattiva in Power BI consente di esplorare le tendenze nel tempo e la relazione tra i due fattori,evidenziando la correlazione tra l'aumento dei turisti e l'incremento dei prezzi.     
 Le regressioni hanno permesso di stimare il totale dei prezzi e il numero dei turisti per il mese di dicembre 2024 e di fare previsioni per il 2025.  
 La crescita costante del numero di turisti è accompagnata da un aumento del numero di annunci e dei prezzi medi, suggerendo che l’affitto breve è ormai parte integrante dell’ecosistema turistico cittadino.   
  **È importante sottolineare che le stime sui turisti e sui prezzi di dicembre 2024, così come le previsioni per il 2025, sono indicative e basate sui dati storici disponibili, con l'obiettivo di esplorare le possibili tendenze.  
