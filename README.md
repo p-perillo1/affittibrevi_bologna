@@ -152,7 +152,7 @@ Per i proprietari che affittano su Airbnb, l’analisi suggerisce di adeguare le
 
 ## Tecnologie Utilizzate
 
-- **Python**: Per la pulizia, trasformazione e analisi dei dati.
+- **Python**: Per l'estrazione, la trasformazione e il caricamento dei dati (ETL) e per l'implementazione dei modelli di machine learning.
 - **NumPy**: Per operazioni numeriche e manipolazione di array.
 - **Pandas**: Per la gestione dei dati.
 - **Matplotlib**: Per la visualizzazione grafica dei dati durante l'analisi esplorativa.
