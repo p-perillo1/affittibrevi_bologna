@@ -56,7 +56,7 @@ In questa fase sono stati sviluppati i seguenti passaggi chiave:
 La colonna `date` del dataframe `Reviews` è stata convertita da tipo object a tipo datetime per facilitare l'analisi nei processi successivi.   
 Durante l'analisi preliminare dei dati trasformati, è stata riscontrata l'assenza dei dati relativi ai turisti di dicembre 2024. Per colmare questa mancanza, nella fase di trasformazione è stata implementata una regressione polinomiale per stimare i valori mancanti. Il modello è stato prima testato utilizzando i dati di novembre 2024 per verificarne l'accuratezza prima di applicarlo alla previsione di dicembre 2024.
 
-**Regressione polinomiale per la stima dei turisti**:   
+**Regressioni polinomiali per i turisti di dicembre 2024**:   
 
 ![Screenshot 2025-04-04 105631](https://github.com/user-attachments/assets/867bce7e-a939-4280-94af-6f4b659adcb4)  
 ![Screenshot 2025-04-04 105648](https://github.com/user-attachments/assets/3aa3f8e3-1200-434b-a078-c3d5c087c0ae)
@@ -98,7 +98,7 @@ ORDER BY anno, mese;
 Dal risultato della query si nota che i dati di dicembre 2024 sono aggiornati al 19-12-2024:  
 ![Screenshot 2025-04-03 232641](https://github.com/user-attachments/assets/aba029c1-7aa2-48e0-a71c-52d1e9263caa)
 
-#### Regressione polinomiale
+#### Regressioni polinomiali per i prezzi di dicembre 2024
 Nella tabella aggregata mensilmente in SQL è stata notata una carenza di dati sui prezzi di dicembre 2024. È stata quindi implementata una regressione polinomiale per stimare i prezzi di dicembre 2024 e aggiornato il database con i nuovi dati.
 
 ![Screenshot 2025-04-04 090013](https://github.com/user-attachments/assets/4a510452-0837-4edf-88ba-31e8783cf5ed)
