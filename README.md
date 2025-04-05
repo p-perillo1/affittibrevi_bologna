@@ -127,7 +127,7 @@ ORDER BY anno;
 
 ![Screenshot 2025-04-05 195756](https://github.com/user-attachments/assets/ef3eb48c-5489-4409-9345-4334f9aedb98)
 
-Per trattare la variabile `mese`, si è utilizzata una tecnica di codifica ciclica. I mesi dell'anno sono stati trasformati in due nuove colonne: seno e coseno.  
+Per trattare la variabile `mese` si è utilizzata una tecnica di codifica ciclica. I mesi dell'anno sono stati trasformati in due nuove colonne: seno e coseno.  
 Questo approccio consente al modello di catturare la periodicità del calendario, evitando che mesi consecutivi ma numericamente distanti, come dicembre(12) e gennaio(1), vengano interpretati come lontani nel tempo.
 
 Per addestrare il modello sono stati utlizzati i dati del 2022 e 2023, in questo modo si è cercato di catturare una dinamica più stabile e coerente con la realtà post-pandemica. Gli anni precedenti (2019–2021) sono stati esclusi per via della forte variabilità dovuta alla pandemia.
