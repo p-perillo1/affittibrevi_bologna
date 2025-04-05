@@ -53,7 +53,8 @@ In questa fase sono stati sviluppati i seguenti passaggi chiave:
 ![Screenshot 2025-04-04 095229](https://github.com/user-attachments/assets/390ef775-f726-4494-9379-e5223a105d4a)
 
 - **Transform**: I dati sono stati puliti e trasformati rimuovendo i duplicati, eliminando le colonne interamente vuote e normalizzando i nomi delle colonne rinominandoli in minuscolo e rimuovendo eventuali spazi bianchi.  
-La colonna `date` del dataframe `Reviews` è stata convertita da tipo object a tipo datetime per facilitare l'analisi nei processi successivi.   
+La colonna `date` del dataframe `Reviews` è stata convertita da tipo object a tipo datetime per facilitare l'analisi nei processi successivi.
+![Screenshot 2025-04-05 200526](https://github.com/user-attachments/assets/36634db3-9be4-47b0-ad0d-11e463f7910d)
 Durante l'analisi preliminare dei dati trasformati, è stata riscontrata l'assenza dei dati relativi ai turisti di dicembre 2024. Per colmare questa mancanza, nella fase di trasformazione è stata implementata una regressione polinomiale per stimare i valori mancanti. Il modello è stato prima testato utilizzando i dati di novembre 2024 per verificarne l'accuratezza prima di applicarlo alla previsione di dicembre 2024.
 
 **Regressioni polinomiali per i turisti di dicembre 2024**:   
