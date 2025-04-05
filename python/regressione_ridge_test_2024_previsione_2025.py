@@ -33,7 +33,7 @@ y_scaled = scaler_y.fit_transform(y).flatten()
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y_scaled, test_size=0.2, random_state=42)
 
 # Modello con Ridge Regression
-model = Ridge(alpha=1.7)
+model = Ridge(alpha=1)
 model.fit(X_train, y_train)
 
 # Valutazione
