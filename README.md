@@ -84,7 +84,28 @@ Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di
 Questi calcoli sono stati effettuati direttamente nel database PostgreSQL utilizzando query SQL per aggregare i dati per anno e mese. Le tabelle risultanti sono state poi utilizzate per l'analisi successiva.   
 **È importante notare che, trattandosi di stime, questi prezzi rappresentano una proiezione basata sui dati disponibili e non devono essere considerati come valori assoluti, ma come un'indicazione dei trend del mercato.**
 
-Tabella prezzi e turisti mensili:    
+Tabella prezzi e turisti mensili:  
+CREATE TABLE prezzo_turisti_mensili AS
+WITH num_reviews AS (
+    SELECT 
+        listing_id, 
+        EXTRACT(YEAR FROM date) AS anno,  
+        EXTRACT(MONTH FROM date) AS mese,  
+        COUNT(listing_id) AS num_reviews_in_month
+    FROM reviews
+    GROUP BY listing_id, anno, mese
+)
+SELECT 
+    nr.anno, 
+    nr.mese,  -- Visualizza il nome del mese in formato numerico
+    SUM(l.price * l.minimum_nights * nr.num_reviews_in_month) AS prezzo_mensile,  -- Moltiplica il prezzo per il minimo di notti e il numero di recensioni
+    t.numero AS turisti_mensili
+FROM listings l
+JOIN num_reviews nr ON l.id = nr.listing_id  -- Associa listings con il numero di recensioni
+JOIN tourism t ON nr.anno = t.anno AND nr.mese = t.mese_num  -- Associa il risultato del primo join a tourism
+GROUP BY nr.anno, nr.mese, t.numero
+ORDER BY nr.anno, nr.mese;
+
 ![Screenshot 2025-04-03 233043](https://github.com/user-attachments/assets/caa5e7a3-c8cf-4575-90ef-89741d0cd554)
 
 ```SQL
