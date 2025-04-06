@@ -9,13 +9,13 @@ Sono stati utilizzati dati storici sui prezzi degli affitti brevi e sul numero d
 
 La dashboard fornisce le seguenti visualizzazioni:
 
-- **Prezzi per anno**: analisi dei prezzi totali degli affitti brevi per ogni anno;
-- **Turisti per anno**: numero totale di turisti che hanno visitato Bologna ogni anno;
-- **Prezzi e turisti per anno**: relazione tra i prezzi degli affitti brevi e il numero di turisti per anno;
-- **Prezzi per mese e anno**: andamento dei prezzi mese per mese per ogni anno;
-- **Prezzi medi per quartiere e conteggio host**: visualizzazione dei prezzi medi degli affitti brevi nei diversi quartieri di Bologna e il conteggio degli host;
-- **Mappa con le distribuzioni degli alloggi**: visualizzazione di una mappa interattiva con la distrubuzione degli alloggi con colori differenti per ogni quartiere;
-- **Variazione percentuale dei prezzi rispetto all'anno precedente**: analisi della variazione percentuale dei prezzi rispetto all'anno precedente.
+- **Prezzi per anno**: analisi dei prezzi totali degli affitti brevi per ogni anno
+- **Turisti per anno**: numero totale di turisti che hanno visitato Bologna ogni anno
+- **Prezzi e turisti per anno**: relazione tra i prezzi degli affitti brevi e il numero di turisti per anno
+- **Prezzi per mese e anno**: andamento dei prezzi mese per mese per ogni anno
+- **Prezzi medi per quartiere e conteggio host**: visualizzazione dei prezzi medi degli affitti brevi nei diversi quartieri di Bologna e il conteggio degli host
+- **Mappa con le distribuzioni degli alloggi**: visualizzazione di una mappa interattiva con la distrubuzione degli alloggi con colori differenti per ogni quartiere
+- **Variazione percentuale dei prezzi rispetto all'anno precedente**: analisi della variazione percentuale dei prezzi rispetto all'anno precedente
 
 ## Flusso di Lavoro
 
