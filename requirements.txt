@@ -8,7 +8,7 @@ numpy==1.25.0
 SQLAlchemy==2.0.14
 
 # Per il machine learning e la regressione
-scikit-learn==1.2.2
+scikit-learn==1.5.1
 
 # Per il modello Prophet (previsioni serie temporali)
 prophet==1.1
