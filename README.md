@@ -3,7 +3,7 @@
 Questo progetto si propone di analizzare il mercato degli affitti brevi a Bologna, utilizzando i dataset forniti da Airbnb e dal Comune di Bologna. L'obiettivo principale è osservare l'andamento dei prezzi e del numero di turisti nel corso degli anni.    
 Sono stati utilizzati dati storici sui prezzi degli affitti brevi e sul numero di turisti per identificare le tendenze, le fluttuazioni e le eventuali correlazioni. Inoltre, sono state sviluppate tecniche di regressione per stimare i prezzi futuri, in particolare per il 2025, usando i dati del 2024 per testare i modelli. Il progetto include la creazione di una dashboard interattiva in Power BI che visualizza l'andamento dei prezzi e dei turisti nel tempo.
 
-![Screenshot 2025-05-22 135549](https://github.com/user-attachments/assets/fbec075d-6bbf-4559-9458-e5ed251f8229)
+![Screenshot 2025-05-22 135549](https://github.com/user-attachments/assets/c91753dd-12a4-4ac8-b68d-628e9d1338e6)
 
 ## Funzionalità della dashboard in Power BI
 
@@ -175,10 +175,10 @@ Una volta completata la fase di costruzione, sono stati eseguiti i seguenti pass
 - **Caricamento dei dati in Power BI**: I dati finali sono stati importati da PostgreSQL in Power BI.
 - **Creazione della dashboard in Power BI**: È stata creata una dashboard interattiva che visualizza i prezzi, i turisti e le loro relazioni nel tempo.
 
-![Screenshot 2025-05-22 135549](https://github.com/user-attachments/assets/1ff11cb8-d6af-4a16-81c3-883f334b7428)  
-![Screenshot 2025-05-22 135604](https://github.com/user-attachments/assets/0d9efd15-6ea5-42b6-8cea-72883fb6b8fb)  
-![Screenshot 2025-05-22 140242](https://github.com/user-attachments/assets/bd2b973c-c61d-4120-92ff-d0590d510326)  
-![Screenshot 2025-05-22 135640](https://github.com/user-attachments/assets/be404985-95d6-4469-bab3-c70ab0307398)
+![Screenshot 2025-05-22 135549](https://github.com/user-attachments/assets/aad376a8-3368-4bf4-9825-a7bd0c02e455)  
+![Screenshot 2025-05-22 135604](https://github.com/user-attachments/assets/128b3078-f46e-41d6-8f75-c2e9066e9f5c)  
+![Screenshot 2025-05-22 140242](https://github.com/user-attachments/assets/f11698bd-8770-479b-a323-109149211cd8)  
+![Screenshot 2025-05-22 140850](https://github.com/user-attachments/assets/39327cf3-8e82-41f7-8b88-f0d4f742abfd)
 
 ## Insight
 
