@@ -209,8 +209,8 @@ L'incremento costante del numero di turisti ha contribuito all'espansione del me
 Questo progetto è stato realizzato a scopo didattico e di analisi.**
 
 ## Link dataset  
-[Dataset Airbnb](https://inumeridibolognametropolitana.it/dati-statistici/turisti-nel-comune-e-nella-citta-metropolitana-di-bologna-serie-storica): Contiene dati sugli affitti brevi nella città di Bologna, estratti dalla piattaforma Inside Airbnb. Include informazioni su prezzi, disponibilità e recensioni.  
-[Dataset Turisti](https://insideairbnb.com/get-the-data/):  Fornisce dati storici sul numero di turisti a Bologna e nell’area metropolitana.
+[Dataset Turisti](https://inumeridibolognametropolitana.it/dati-statistici/turisti-nel-comune-e-nella-citta-metropolitana-di-bologna-serie-storica): Fornisce dati storici sul numero di turisti a Bologna e nell’area metropolitana.  
+[Dataset Airbnb](https://insideairbnb.com/get-the-data/): Contiene dati sugli affitti brevi nella città di Bologna, estratti dalla piattaforma Inside Airbnb. Include informazioni su prezzi, disponibilità e recensioni.
 
 ## Struttura del progetto
 
