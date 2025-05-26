@@ -156,7 +156,7 @@ Questo approccio consente al modello di catturare la periodicità del calendario
 
 Per addestrare il modello sono stati utlizzati i dati del 2022 e 2023, in questo modo si è cercato di catturare una dinamica più stabile e coerente con la realtà post-pandemica. Gli anni precedenti (2019–2021) sono stati esclusi per via della forte variabilità dovuta alla pandemia.
 
-Analizzando i dati è emerso che la crescita tra il 2023 e il 2024 è stata inferiore rispetto agli anni precedenti. Questo ha introdotto una fluttuazione temporanea nei trend che avrebbe potuto distorcere le previsioni a del modello.  
+Analizzando i dati è emerso che la crescita tra il 2023 e il 2024 è stata inferiore rispetto agli anni precedenti. Questo ha introdotto una fluttuazione temporanea nei trend che avrebbe potuto distorcere le previsioni del modello.  
 L'inclusione del 2024 nel set di addestramento avrebbe spinto il modello ad adattarsi a questa anomalia di crescita ridotta, compromettendo la capacità predittiva per i periodi successivi.   
 Per questo motivo il 2024 è stato escluso dal training ed è stato utilizzato solo come dato di test, in modo da valutare il modello su dati reali ma non influenzarne l’addestramento.  
 
