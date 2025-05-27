@@ -74,7 +74,11 @@ Visualizzazione dopo l' aggiunta del valore stimato:
 - **Load**: I dati trasformati sono stati caricati in un database PostgreSQL utilizzando Supabase.
 
 ![Screenshot 2025-04-04 084849](https://github.com/user-attachments/assets/a42d5a08-5b5e-489a-926d-8e7ce207423a)
-      
+
+#### Aggiunta variante ETL con OOP
+Oltre alla pipeline ETL implementata con script separati(extract.py, transform.py, load.py, main.py) è stata sviluppata anche una variante orientata agli oggetti(OOP).
+Questa versione utilizza classi per gestire le fasi di estrazione, trasformazione e caricamento dei dati, offrendo una struttura più modulare ed estendibile.
+
 #### Calcolo dei prezzi e turisti annuali e mensili in SQL
 Sono state create due tabelle aggregate in SQL per analizzare i prezzi e i flussi turistici su base mensile e annuale.  
 Poiché nei dati originali erano presenti solo il prezzo per notte, il numero di recensioni e il numero minimo di notti per ciascun alloggio, sono stati calcolati i prezzi annuali e mensili con le seguenti formule:
@@ -222,6 +226,7 @@ affittibrevi_bologna/
 │   ├── transform.py                                    # Trasformazione dei dati per il modello
 │   ├── load.py                                         # Caricamento dei dati nel database PostgreSQL
 │   ├── main.py                                         # Script principale che esegue l'intero processo ETL
+│   ├── etl_oop.py                                      # Pipeline ETL orientata agli oggetti(OOP)
 │   ├── regressione_turisti_novembre_2024.py            # Modello di regressione per turisti a novembre 2024
 │   ├── regressione_turisti_dicembre_2024.py            # Modello di regressione per turisti a dicembre 2024
 │   ├── regressione_prezzi_novembre_2024.py             # Modello di regressione per prezzi a novembre 2024
